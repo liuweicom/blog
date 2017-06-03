@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS第一天 | liuwei_blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、上节课知识复习● HTML骨架结构，抽象的：1   &amp;lt;!DOCTYPE …… &amp;gt;2   3       4           网页的配置5       6       7           给用户看的8       9    ● DTD：文档类型声明Doc Type Declaration。一共有7种DTD，3种HTML4.01的，3种XHTML1.0的，1种HTML5的（HT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS第一天">
+<meta property="og:url" content="http://yoursite.com/2017/06/03/CSS第一天/index.html">
+<meta property="og:site_name" content="liuwei_blog">
+<meta property="og:description" content="一、上节课知识复习● HTML骨架结构，抽象的：1   &amp;lt;!DOCTYPE …… &amp;gt;2   3       4           网页的配置5       6       7           给用户看的8       9    ● DTD：文档类型声明Doc Type Declaration。一共有7种DTD，3种HTML4.01的，3种XHTML1.0的，1种HTML5的（HT">
+<meta property="og:image" content="http://yoursite.com/2017/06/03/CSS第一天/路径">
+<meta property="og:image" content="http://yoursite.com/2017/06/03/CSS第一天/images/jiehunzhao/0.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/0.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/03/CSS第一天/””">
+<meta property="og:updated_time" content="2017-06-03T08:29:45.474Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS第一天">
+<meta name="twitter:description" content="一、上节课知识复习● HTML骨架结构，抽象的：1   &amp;lt;!DOCTYPE …… &amp;gt;2   3       4           网页的配置5       6       7           给用户看的8       9    ● DTD：文档类型声明Doc Type Declaration。一共有7种DTD，3种HTML4.01的，3种XHTML1.0的，1种HTML5的（HT">
+<meta name="twitter:image" content="http://yoursite.com/2017/06/03/CSS第一天/路径">
+  
+    <link rel="alternate" href="/atom.xml" title="liuwei_blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">liuwei_blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS第一天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/03/CSS第一天/" class="article-date">
+  <time datetime="2017-06-03T08:05:17.624Z" itemprop="datePublished">2017-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS第一天
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、上节课知识复习<br>● HTML骨架结构，抽象的：<br>1   &lt;!DOCTYPE …… &gt;<br>2   <html><br>3       <head><br>4           网页的配置<br>5       </head><br>6       <body><br>7           给用户看的<br>8       </body><br>9   </html></p>
+<p>● DTD：文档类型声明Doc Type Declaration。一共有7种DTD，3种HTML4.01的，3种XHTML1.0的，1种HTML5的（HTML5我们后面专门的课程学习）。<br>三个小种： strict（更为严格，不能用u、b、i标签）、transitional（不怎么严格）、frameset<br>XHTML总体上要比HTML严格，比如必须是小写字母标签等等。</p>
+<p>● 字符集Charset， 这条meta不用背。<br>1   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><br>UTF-8   ： 字符全，每一个汉字3个字节，所以文件尺寸大。<br>gb2312(gbk) ： 字符少，每一个汉字2个字节，所以文件尺寸小。</p>
+<p>● 关键词、页面描述，这两个meta不难，尽量背诵一下：<br>1   <meta name="Keywords" content="词,词"><br>2   <meta name="Description" content="页面描述"></p>
+<p>● title标签就是页面标题</p>
+<p>● HTML就是负责描述语义的，所以就是用标签对儿的形式来给文本增加语义。<br>h1~h6  标题<br>p 段落<br>p标签要注意的是，里面只能放文本、图片、表单元素（这三个东西都是流元素，CSS后面细讲）。</p>
+<p>● img图片<br>完整语法，两个属性src和alt，都要知道是什么意思！<br>src：  source资源，    alt ： alternate 替代物<br>1   <img src="路径" alt="替代文本，当图片不能显示的时候，显示这里的文字"><br>图片里面的路径，相对路径，从html出发，找到图片。<br>1       <img src="images/jiehunzhao/0.png" alt=""><br>2       <img src="../../0.png" alt=""><br>● a标签，超级链接<br>a是英语anchor锚的意思。<br>a标签常用的就是三个属性：<br>1   <a href="网址" title="悬停文本" target="_blank">超级链接文字</a></p>
+<p>页面内的锚点，用name属性或者id属性<br>1       <a name="grjj"></a><br>2       <a id="grjj"></a><br>如果想跳转到某个锚点：<br>1   <a href="#grjj"></a></p>
+<p>● Chrome浏览器，中文翻译应该是“铬”，不是“硅”。审查元素功能快捷键是F12。<br>前端，很多东西都是自己审出来的，前端高手，都是开着审查元素上网的。</p>
+<p>二、列表<br>列表有3种<br>2.1 无序列表<br>无序列表，用来表示一个列表的语义，并且每个项目和每个项目之间，是不分先后的。<br>ul就是英语unordered list，“无序列表”的意思。<br>li 就是英语list item ， “列表项”的意思。<br>你会发现，这是我们学习的第一个“组标签”，就是要么不写，要么就要写一组。<br>1       <ul><br>2           <li>北京</li><br>3           <li>上海</li><br>4           <li>广州</li><br>5           <li>铁岭</li><br>6       </ul><br>也就是说，所以的li不能单独存在，必须包裹在ul里面；反过来说，ul的“儿子”不能是别的东西，只能有li。</p>
+<p>下面的是错误的，因为必须用ul包裹：<br>7           <li>北京</li><br>8           <li>上海</li><br>9           <li>广州</li><br>10          <li>铁岭</li></p>
+<p>下面的也是错误的，因为ul里面只能有li标签，而不能有别的：<br>1       <ul><br>2           <h3>中国主要城市</h3><br>3           <li>北京</li><br>4           <li>上海</li><br>5           <li>广州</li><br>6           <li>铁岭</li><br>7       </ul></p>
+<p>  浏览器会默认的给无序列表小圆点的“先导符号”<br>但是，我们这里再次强调，ul的作用，并不是给文字增加小圆点的，而是增加无序列表的“语义”的。</p>
+<p>ul标签实际应用场景：<br>导航条：</p>
+<p>li里面放置的内容可能很多：</p>
+<p>ul的儿子，只能是li。但是li是一个容器级标签，li里面什么都能放，比如：<br>1   <ul><br>2           <li><br>3               <h4>习近平谈治国理政</h4><br>4               <p>¥49.00</p><br>5               <p>《习近平谈治国理政》谈中国、论世界，为各国读者开启了一扇观察和感知中国的窗口。阅读这本书，可以了解以习近平同志为总书记的党中央治国理念和执政方略，品味悠长醇厚的中国历史文化，感受当</p><br>6           </li><br>7           <li><br>8               <h4>习近平用典</h4><br>9               <p>¥23.60</p><br>10              <p>人民日报社社长杨振武主持编写并作序，人民日报社副总编辑卢新宁组织撰写解读文字，旨在对习近平总书记重要讲话（文章）引用典故的现实意义进行解读，对典故的背景义</p><br>11          </li><br>12          <li><br>13              <h4>摆脱贫困</h4><br>14              <p>26.00</p><br>15              <p>追本溯源 融会贯通    深入学习贯彻习近平总书记系列重要讲话精神    推动学习贯彻向广度深度拓展   习近平总书记**部个人专著   时隔22年后重印发行</p><br>16          </li><br>17      </ul></p>
+<p>甚至于可以再放一个ul：<br>1   <ul><br>2           <li><br>3               吃的<br>18              <ul><br>19                  <li>饼干</li><br>20                  <li>面包</li><br>21                  <li><br>22                      巧克力<br>23                      <ul><br>24                          <li>德芙</li><br>25                          <li>费列罗</li><br>26                      </ul><br>27                  </li><br>28              </ul><br>4           </li><br>5           <li><br>6               用的<br>7               <ul><br>8                   <li>笔记本</li><br>9                   <li>圆珠笔</li><br>10              </ul><br>11          </li><br>12          <li><br>13              喝的<br>14              <ul><br>15                  <li>牛奶</li><br>16                  <li>可乐</li><br>17              </ul><br>18          </li><br>19      </ul></p>
+<p>2.2 有序列表<br>ordered list  有序列表，用ol表示<br>1       <ol><br>2           <li>小苹果</li><br>3           <li>月亮之上</li><br>4           <li>最炫民族风</li><br>5       </ol></p>
+<p>浏览器会自动增加阿拉伯序号：</p>
+<p>也就是说，ol和ul就是语义不一样，怎么使用都是一样的。<br>ol里面只能有li，li必须被ol包裹。li是容器级。</p>
+<p>ol这个东西用的不多，如果想表达顺序，大家一般也用ul：<br>1   <ul><br>2       <li>1. 小苹果</li><br>3       <li>2. 月亮之上</li><br>4       <li>3. 最炫民族风</li><br>5   </ul></p>
+<p>2.3 定义列表<br>定义列表也是一个组标签，不过比较复杂，出现了三个标签：<br>dl表示definition list 定义列表<br>dt表示definition title    定义标题<br>dd表示definition description 定义表述词儿<br>dt、dd只能在dl里面；dl里面只能有dt、dd<br>1       <dl><br>2           <dt>北京</dt><br>3           <dd>国家首都，政治文化中心</dd><br>4           <dt>上海</dt><br>5           <dd>魔都，有外滩、东方明珠塔、黄浦江</dd><br>6           <dt>广州</dt><br>7           <dd>中国南大门，有珠江、小蛮腰</dd><br>8       </dl><br>表达的语义是两层：<br>1) 是一个列表，列出了北京、上海、广州三个项目<br>2）每一个词儿都有自己的描述项。<br>dd是描述dt的。</p>
+<p>定义列表用法非常灵活，可以一个dt配很多dd：<br>1       <dl><br>2           <dt>北京</dt><br>3           <dd>国家首都，政治文化中心</dd><br>4           <dd>污染很严重，PM2.0天天报表</dd><br>5           <dt>上海</dt><br>6           <dd>魔都，有外滩、东方明珠塔、黄浦江</dd><br>7           <dt>广州</dt><br>8           <dd>中国南大门，有珠江、小蛮腰</dd><br>9       </dl><br>北京这个项目，用了两个dd来描述。<br>还可以拆开，让每一个dl里面只有一个dt和dd，这样子感觉清晰一些。<br>1       <dl><br>2           <dt>北京</dt><br>3           <dd>国家首都，政治文化中心</dd><br>4           <dd>污染很严重，PM2.0天天报表</dd><br>5       </dl><br>6<br>7       <dl><br>8           <dt>上海</dt><br>9           <dd>魔都，有外滩、东方明珠塔、黄浦江</dd><br>10      </dl><br>11<br>12      <dl><br>13          <dt>广州</dt><br>14          <dd>中国南大门，有珠江、小蛮腰</dd><br>15      </dl></p>
+<p>真实案例：<br>京东最下方：</p>
+<p>结构：<br>1   <dl><br>2       <dt>购物指南</dt><br>3       <dd><br>4           <a href="#">购物流程</a><br>5           <a href="#">会员介绍</a><br>6           <a href="#">生活旅行/团购</a><br>7           <a href="#">常见问题</a><br>8           <a href="#">大家电</a><br>9           <a href="#">联系客服</a><br>10      </dd><br>11  </dl><br>12  <dl><br>13      <dt>配送方式</dt><br>14      <dd><br>15          <a href="#">上门自提</a><br>16          <a href="#">211限时达</a><br>17          <a href="#">配送服务查询</a><br>18          <a href="#">配送费收取标准</a><br>19          <a href="#">海外配送</a><br>20      </dd><br>21  </dl></p>
+<p>传智播客师资介绍页面：</p>
+<p>dt、dd都是容器级标签，想放什么都可以。所以，现在就应该更加清晰的知道：<br>用什么标签，不是根据样子来决定，而是语义。</p>
+<p>三、div和span<br>div和span是非常重要的标签，div的语义是division“分割”； span的语义就是span“范围、跨度”。<br>CSS课程中你将知道，这两个东西，都是最最重要的“盒子”。</p>
+<p>1       <div><br>2           <h3>中国主要城市</h3><br>3           <ul><br>4               <li>北京</li><br>5               <li>上海</li><br>6               <li>广州</li><br>7           </ul><br>8       </div><br>9<br>10      <div><br>11          <h3>美国主要城市</h3><br>12          <ul><br>13              <li>纽约</li><br>14              <li>洛杉矶</li><br>15              <li>华盛顿</li><br>16              <li>西雅图</li><br>17          </ul><br>18      </div><br>div在浏览器中，默认是不会增加任何的效果改变的，但是语义变了，div中的所有元素是一个小区域。<br>div标签是一个容器级标签，里面什么都能放，甚至可以放div自己</p>
+<p>span也是表达“小区域、小跨度”的标签，但是是一个“文本级”的标签。<br>就是说，span里面只能放置文字、图片、表单元素。 span里面不能放p、h、ul、dl、ol、div。<br>span里面是放置小元素的，div里面放置大东西的：<br>1               </p><p><br>2                   简介简介简介简介简介简介简介简介<br>3                   <span><br>4                       <a href="">详细信息</a><br>5                       <a href="">购买</a><br>6                   </span><br>7               </p><br>div标签是最最重要的布局标签，至于class是什么意思，下午说：<br>1       <div class="header"><br>2           <div class="logo"></div><br>3           <div class="nav"></div><br>4       </div><br>5       <div class="content"><br>6           <div class="guanggao"></div><br>7           <div class="dongxi"></div><br>8       </div><br>9       <div class="footer"></div><br>所以，我们亲切的称呼这种模式叫做“div+css”。div标签负责布局，负责结构，负责分块。css负责样式。<p></p>
+<p>四、表单<br> 表单就是收集用户信息的，就是让用户填写的、选择的。<br>1       <div><br>2           <h3>欢迎注册本网站</h3><br>3           <form><br>4               所有的表单内容，都要写在form标签里面<br>5           </form><br>6       </div><br>form是英语表单的意思。form标签里面有action属性和method属性，在《Ajax》课程上给大家讲解。稍微说一下：action属性就是表示，表单将提交到哪里。 method属性表示用什么HTTP方法提交，有get、post两种。<br>4.1 文本框<br>1   <input type="text"></p>
+<p>input表示“输入”，指的是这是一个“输入小部件”，<br>type表示“类型”，<br>text表示“文本”，指的是类型是一个文本框的输入小部件。<br>这是一个自封闭标签，自此，我们学习的自封闭标签有：<br>1   <meta name="”Keywords”" content="””"><br>2   <img src="””" alt="””"><br>3   <input type="”text”"></p>
+<p>value表示“值”，value属性就是默认有的值，文本框中已经被填写好了：<br>1   <input type="text" value="默认有的值"></p>
+<p>4.2 密码框<br>1   <input type="password"><br>也就是说，input标签很神奇，又是文本框，又是密码框。<br>到底是啥？看type属性的值是什么，来决定。<br>如果type=”text”  文本框<br>如果type=”password” 密码框</p>
+<p>4.3 单选按钮</p>
+<p>只能选一个，术语叫做“互斥”。<br>1   <input type="radio" name="xingbie"> 男<br>2   <input type="radio" name="xingbie"> 女<br>radio是“收音机”的意思，input的type的值，如果是radio就是单选按钮。<br>非常像以前的收音机，按下去一个按钮，其他的就抬起来了。所以叫做radio。</p>
+<p>单选按钮，天生是不能互斥的，如果想互斥，必须要有相同的name属性。name就是“名字”。<br>1   <input type="radio" name="xingbie"> 男<br>2   <input type="radio" name="xingbie"> 女<br>默认被选择，就应该书写checked=”checked”<br>1   <input type="radio" name="sex" checked="checked"></p>
+<p>4.4 复选框</p>
+<p>也是input标签，type是checkbox。<br>1   </p><p><br>2       请选择你的爱好：<br>3       <input type="checkbox" name="aihao"> 睡觉<br>4       <input type="checkbox" name="aihao"> 吃饭<br>5       <input type="checkbox" name="aihao"> 足球<br>6       <input type="checkbox" name="aihao"> 篮球<br>7       <input type="checkbox" name="aihao"> 乒乓球<br>8       <input type="checkbox" name="aihao"> 打豆豆<br>9   </p><br>复选框，最好也是有相同的name（虽然他不需要互斥，但是也要有相同的name）<p></p>
+<p>HTML5中，input的类型又增加了很多（比如date、color，但是都不兼容，所以我们是在专门的HTML5课程中学）。<br>不过现在，我们就先学习这四个。<br>1   <input type="text"> 文本框<br>2   <input type="password"> 密码框<br>1   <input type="radio"> 单选按钮<br>2   <input type="checkbox"> 复选框</p>
+<p>4.5 下拉列表<br>select就是“选择”，option“选项”。<br>select标签和ul、ol、dl一样，都是组标签。<br>1   <select><br>2       <option>北京</option><br>3       <option>河北</option><br>4       <option>河南</option><br>5       <option>山东</option><br>6       <option>山西</option><br>7       <option>湖北</option><br>8       <option>安徽</option><br>9   </select></p>
+<p>4.6 多行文本框（文本域）<br>text就是“文本”，area就是“区域”。<br>1   <textarea cols="30" rows="10"></textarea><br>这个标签，是个标签对儿。对儿里面不用写东西。如果写的话，就是这个框的默认文字。</p>
+<p>cols属性表示columns“列”，rows属性表示rows“行”。<br>值就是一个数，表示多少行，多少列。</p>
+<p>4.7 三种按钮<br>按钮也是input标签，一共有三种按钮：<br>普通按钮：<br>1   <input type="button" value="我是一个普通按钮"><br>button就是英语“按钮”的意思。value就是“值”的意思，按钮上面显示的文字。</p>
+<p>提交按钮：<br>1   <input type="submit"><br>submit就是英语“提交”的意思。这个按钮不需要写value自动就有“提交”文字。<br>这个按钮点击，表单真的能提交。这个表单就会被提交到，form标签的action属性中的那个页面中去。<br>前端开发工程师，只需要关心页面的美、样式、板式、交互。至于数据的保存、读取，都是后台工程师做的事情。（Node.js我们猴年要学，Node.js就是后台语言，到时候我们就知道怎么把表单存储到数据库中了。实际上Ajax课会给大家讲半天的PHP，涉及MySQL，Ajax课你就知道表单怎么真的被提交了。）</p>
+<p>重置按钮：<br>1   <input type="reset"><br>reset就是“复位”的意思。</p>
+<p>至此，input的类型实际上非常多，HTML5将会变得更多。现在的阶段，input的类型：<br>1   text<br>2   password<br>3   radio<br>4   checkbox<br>5   button<br>6   submit<br>7   reset</p>
+<p>4.8 label标签<br>本质上讲，“男”、“女”这两个汉字，和input元素没有关系。<br>1   <input type="radio" name="sex"> 男<br>2   <input type="radio" name="sex"> 女</p>
+<p>label就是解决这个问题的。<br>1   <input type="radio" name="sex" id="nan"> <label for="nan">男</label><br>2   <input type="radio" name="sex" id="nv"> <label for="nv">女</label></p>
+<p>input元素要有一个id，然后label标签就有一个for属性，和id相同，就表示绑定了，这个label和input就有绑定关系了。</p>
+<p>复选框也有label：<br>1   <input type="checkbox" id="kk"><br>2   <label for="kk">10天内免登陆</label><br>什么表单元素都有label。<br>五、HTML杂项<br>5.1 HTML注释<br>任何的程序、代码都有注释，注释就是给程序员看的，不影响程序的。</p>
+<p>适当的注释，能够让我们的程序更加可读，所以用中文提示自己，这里的程序是干什么的。<br>1       <!--这里是头部，还没有做完，准备加两天班弄完--><br>2       <div>头部</div><br>3       <!--这里是陈伟弄的，跟我没关系--><br>4       <div>主要内容</div><br>5       <!--这里是高俊负责的--><br>6       <div>页尾</div><br>HTML注释的语法<br>1   <!--注释的内容--><br>Sublime中按ctrl+/ 就是注释</p>
+<p>5.2 字符实体<br>我们想在页面上输出“</p><h1>”这些字符，但是HTML认为这是一个标签，还没封闭。<br>1   好高兴啊，今天我们学习了<h1>标签，老师说这个标签是主标题的语义。<br>所以，<br>1   &lt;<br>就是&lt;的字符实体，什么意思呢？就是用常用字符表示这些符号的方式。<br>lt 就是英语less than 小于的意思；<p></p>
+<p>1   &gt;<br>就是&gt;的字符实体。<br>gt就是greater than 大于的意思。</p>
+<p>1   &copy;<br>就是©  版权符号。</p>
+<p>1   &nbsp;<br>nbsp就是英语non-breaking spacing不打断空格的意思，就是空格。</p>
+<p>所以：<br>1   哈&nbsp;&nbsp;&nbsp;&nbsp;哈<br>空出了4个字的格，可以防止空白折叠现象。</p>
+<p>5.3 HTML废弃标签介绍<br>HTML现在只负责语义，而不负责样式。但是HTML一开始，连样式也包办了。<br>这些样式的标签，都已经被废弃。</p>
+<p>2004年之前的东西了：<br>1   <font size="9" color="red">哈哈</font></p>
+<p>这些标签都是css钩子，而不是原意：<br>1       <b>加粗</b><br>2       <u>下划线</u><br>3       <i>倾斜</i><br>4       <del>删除线</del><br>5       <em>强调</em><br>6       <strong>强调</strong><br>这些标签，是有着浓厚的样式的作用，干涉了css的作用，所以HTML抛弃了他们。</p>
+<p>水平线：<br>1   <hr></p>
+<p>换行：<br>1   <br><br>不另起一个段落，进行换行。<br>1       </p><p><br>2           哈<br>哈哈<br>3       </p><br>网页中99.9999%需要换行的时候，是因为另起了一个段落，所以要用p，不要用<br><br>br是英语break打断的意思。<p></p>
+<p>标准的div+css页面，用的标签种类很少：<br>1   div  p  h1  span   a   img   ul   ol    dl    input<br>知道每个标签的特殊用法、属性。比如a标签，img的属性。<br>HTML结构、字符集。<br>网络的基础知识。</p>
+<p>六、CSS<br>现在的互联网前端三层：<br>HTML    超文本标记语言 从语义的角度描述页面结构。<br>CSS     层叠式样式表  从审美的角度负责页面样式。<br>JS      JavaScript      从交互的角度描述页面行为。</p>
+<p>我们现在要开始学习CSS了，就是样式。<br>6.1 CSS整体感知<br>css是cascading style sheet 层叠式样式表的简写。“层叠式”的意思，我们将慢慢的去理解。<br>css的最新版本是css3，我们学习的是css2.1。 因为css3和css2.1不矛盾，必须先学2.1然后学3。</p>
+<p>1       <style type="text/css"><br>2           p{<br>3               color:red;<br>4               font-size: 30px;<br>5               text-decoration: underline;<br>6               font-weight: bold;<br>7               text-align: center;<br>8               font-style: italic;<br>9           }<br>10          h1{<br>11              color:blue;<br>12              font-size: 50px;<br>13              font-weight: bold;<br>14              background-color: pink;<br>15          }<br>16      </style></p>
+<p>我们写css的地方是style标签，就是“样式”的意思，写在head里面。<br>后面的课程你将知道，css也可以写在单独的文件里面，现在我们先写在style标签里面<br>1   <style type="”text/css”"><br>2   </style><br>type表示“类型” ， text就是“纯文本”。css也是纯文本的。<br>sublime这里如果想自动生成，那么要输入：</p>
+<p>&lt;st 然后按tab键。</p>
+<p>css对换行不敏感，对空格也不敏感。但是一定要有标准的语法。冒号，分号都不能省略。<br>语法：<br>1   选择器{<br>2       k:v;<br>3       k:v;<br>4       k:v;<br>5       k:v;<br>6   }<br>7   选择器{<br>8       k:v;<br>9       k:v;<br>10      k:v;<br>11      k:v;12  }</p>
+<p>6.2 一些常见的属性<br>字符颜色：<br>1   color:red;<br>color属性的值，可以是英语单词，比如red、blue、yellow等等；也可以是rgb、十六进制，不要着急，后几天讲。<br>sublime中的快捷键是c，然后tab</p>
+<p>字号大小：<br>1   font-size:40px;<br>font就是“字体”，size就是“尺寸”。px是“像素”。<br>单位必须加，不加不行。<br>sublime中的快捷键是fos，然后tab</p>
+<p>背景颜色：<br>1   background-color: blue;<br>background就是“背景”。<br>sublime中的快捷键是bgc，然后tab</p>
+<p>加粗：<br>1   font-weight: bold;<br>font是“字体” weight是“重量”的意思，bold粗。<br>sublime中的快捷键是fwb，然后tab<br>不加粗：<br>1   font-weight: normal;<br>normal就是正常的意思<br>sublime中的快捷键是fwn，然后tab</p>
+<p>斜体：<br>1   font-style: italic;<br>italic就是“斜体”<br>sublime中的快捷键是fsi，然后tab<br>不斜体：<br>1   font-style: normal;<br>sublime中的快捷键是fsn，然后tab</p>
+<p>下划线：<br>1   text-decoration: underline;<br>decoration就是“装饰”的意思。<br>sublime中的快捷键是tdu，然后tab</p>
+<p>没有下划线：<br>1   text-decoration:none;<br>sublime中的快捷键是tdn，然后tab</p>
+<p>css没啥难的，就是要把属性给记忆准确。</p>
+<p>七、基础选择器<br>css怎么学？很简单有两个知识部分：<br>1） 选择器，怎么选；<br>2） 属性，样式是什么<br>7.1 标签选择器<br>就是标签的名字。</p>
+<p>1   </p><h1>前端与移动开发<span>1期班</span>基础班</h1><br>css:<br>1       <style type="text/css"><br>2           span{<br>3               color:red;<br>4           }<br>5       </style><p></p>
+<p>注意的是：<br>1） 所有的标签，都可以是选择器。比如ul、li、label、dt、dl、input<br>1           ul{<br>2               background-color: yellow;<br>3           }</p>
+<p>2） 无论这个标签藏的多深，一定能够被选择上：<br>1       <ul><br>2           <li><br>3               <ul><br>4                   <li><br>5                       <ul><br>6                           <li><br>7                               <ul><br>8                                   <li><br>9                                       <p>我是很深的p</p><br>10                                  </li><br>11                              </ul><br>12                          </li><br>13                      </ul><br>14                  </li><br>15              </ul><br>16          </li><br>17      </ul><br>css：<br>1           p{<br>2               color:blue;<br>3           }<br>能够让很深的p变蓝。</p>
+<p>3） 选择的所有，而不是一个。</p>
+<p>标签选择器，选择的是页面上所有这种类型的标签，所以经常描述“共性”，无法描述某一个元素的“个性”的。</p>
+<p>7.2 id选择器<br>1       </p><p>我是段落1</p><br>2       <p id="para2">我是段落2</p><br>3       <p>我是段落3</p><br>css：<br>1       <style type="text/css"><br>2           #para2{<br>3               color:red;<br>4           }<br>5       </style><br>id选择器的选择符是“#”。<br>任何的HTML标签都可以有id属性。表示这个标签的名字。<br>这个标签的名字，可以任取，但是：<br>1） 只能有字母、数字、下划线<br>2） 必须以字母开头<br>3） 不能和标签同名。比如id不能叫做body、img、a<p></p>
+<p>一个HTML页面，不能出现相同的id，哪怕他们不是一个类型。比如页面上有一个id为pp的p，一个id为pp的div，是非法的！</p>
+<p>一个标签可以被多个css选择器选择，共同作用，这就是“层叠式”的第一层含义。第二层含义，明天介绍。</p>
+<p>如果选择器冲突了，比如id选择器说这个文字是红色的，标签选择器说这个文字是绿色的。那么听谁的？<br>实际上，css有着非常严格的计算公式，能够处理冲突，明天介绍。</p>
+<p>注：此为传智播客笔记，仅供学习，不得转载</p>
+</h1></h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/03/CSS第一天/" data-id="cj3h0s5hx0001ysxj2s5wnc9n" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/03/CSS第二天/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          CSS第二天
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/03/HTML第二天/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">HTML第二天</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/03/CSS第二天/">CSS第二天</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/03/CSS第一天/">CSS第一天</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/03/HTML第二天/">HTML第二天</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/03/HTML第一天/">HTML第一天</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/23/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

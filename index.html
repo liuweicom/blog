@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,359 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-CSS第二天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/03/CSS第二天/" class="article-date">
+  <time datetime="2017-06-03T08:06:31.927Z" itemprop="datePublished">2017-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/03/CSS第二天/">CSS第二天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第1题 考察title标签</p>
+<p><title>出现在<head>里面，表示页面的标题。直观上，我们可以在浏览器的标题栏（标签栏）中看见。</head></title></p>
+<p>B正确。</p>
+<p>第2题 考察的就是HTML的本质</p>
+<p>HTML只依靠标签对儿表达语义，和是否缩进、换行没有任何关系！只要是标签有正确的嵌套关系，正确的父子关系，那么就是一个合法的HTML结构，不一定要缩进。百度的首页，为了减小文件体积，所以都是没有缩进的。提到HTML的作用，只能从语义方面从想，绝对不能想样式。所以C错误的。D正确。<br>第3题 考察常用属性</p>
+<p>1   <img src="1.jpg"><br>2<br>3   <a href="1.html">点击我</a><br>img是image“图像”；<br>src是source“资源”；<br>a是anchor“锚”；<br>href是hypertext reference“超文本地址”</p>
+<p>第4题 考察HTTP的原理</p>
+<p>服务器上有一些文件，html、图片、css、js文件，通过HTTP请求传输到了用户的电脑里面。所以，第二次访问的时候，这些图片就不用传输了（Ajax课上，你将知道这是HTTP 304状态），所以页面变得快。<br>A，错误，没有所谓的vip通路。<br>B，正确<br>C，错误。因为HTTP不是一个持久连接的协议，传完就拉倒了，就关闭连接了，所以没有一个持续的通路。<br>D，错误。每次访问，都是不同的寻址过程，不会“记路”。</p>
+<p>第5题 纯文本</p>
+<p>用记事本打开，不是乱码，是可读的，那么一定是纯本文文件。只有文本，没有样式，没有语义。<br>所以，.java文件是纯文本的, .class文件不是纯文本的。<br>所有的纯文本文件都能用记事本、notepad++、editplus、sublime编辑。</p>
+<p>第6题 考察XHTML</p>
+<p>所有的标签名、属性都要小写，必须使用引号，必须封闭。答案是B</p>
+<p>第7题 考察定义列表</p>
+<p>一定要记住每个标签标示什么，就是英语原意是什么？比如<br>dl 就是definition list， 定义列表；<br>dt 就是definition title，定义标题；<br>dd就是definition description，定义描述</p>
+<p>第8题 考察相对路径<br>此题正确：傅宝乐、王丹宇、董家波、张敏、贾久兴、白丽哲、周龙、李婉莹、王博、王佳琦、王飞飞、颜庭光、邵正清、于亚静</p>
+<p>1.html中，有一个能够点击的图片。所以骨架：<br>1   <a href=""><img src=""></a><br>href里面是相对路径，要从1.html出发找到2.html；<br>src里面也是相对路径，要从1.html出发找到kaola.png。</p>
+<p>标准答案：<br>1   <a href="../myweb2/2.html" target="_blank"><img src="../../photo/kaola.png"></a></p>
+<p>我们一直在用的是相对路径，就是从自己出发找到别人。用相对路径的好处很明显，就是站点文件夹可以拷着走。<br>相对路径的好处：站点不管拷贝到哪里，文件和图片的相对路径关系都是不变的。<br>相对路径使用有一个前提，就是网页文件和你的图片，必须在一个服务器上。<br>比如，你现在想插入一个新浪网上的图片，那么就不能用相对路径。就要用绝对路径。<br>绝对路径非常简单，所有以<a href="http://开头的路径，就是绝对路径。" target="_blank" rel="external">http://开头的路径，就是绝对路径。</a><br>1       <img src="http://i1.sinaimg.cn/dy/deco/2013/0329/logo/LOGO_1x.png" alt=""><br>2       <a href="http://www.sohu.com" target="_blank" rel="external">点击我跳转到搜狐</a></p>
+<p>老师，我的网页在C盘，图片却在D盘，能不能插入呢？<br>答案： 用相对路径不能，用绝对路径也不能。<br>注意，可以使用file://来插入，但是这种方法，没有任何意义！因为服务器上没有所谓c盘、d盘。</p>
+<p>下面的方法是行的，但是没有任何工程上的意义，这是因为服务器没有盘符，linux系统没有盘符，<br>1   <img src="file://C:\Users\Danny\Pictures\明星\1.jpg" alt=""></p>
+<p>总结一下：<br>我们现在无论是在a标签、img标签，如果要用路径。只有两种路径能用，就是相对路径和绝对路径。<br>相对路径，就是../   image/ 这种路径。从自己出发，找到别人；<br>绝对路径，就是<a href="http://开头的路径。" target="_blank" rel="external">http://开头的路径。</a><br>绝对不允许使用file://开头的东西，这个是完全错误的！！</p>
+<p>二、css基础选择器-+9<br>3<br>html负责结构，css负责样式，js负责行为。<br>css写在head标签里面，容器style标签。<br>先写选择器，然后写大括号，大括号里面是样式。<br>1       <style type="text/css"><br>2           body{<br>3               background-color: pink;<br>4           }<br>5       </style><br>常见属性：<br>1           h1{<br>2               color:blue;<br>3               font-size: 60px;<br>4               font-weight: normal;<br>5               text-decoration: underline;<br>6               font-style: italic;<br>7           }<br>2.1 标签选择器<br>就是用标签名来当做选择器。<br>1） 所有标签都能够当做选择器，比如body、h1、dl、ul、span等等<br>2） 不管这个标签藏的多深，都能够被选择上。<br>3） 选择的是所有的，而不是某一个。所以是共性，而不是特性。</p>
+<p>比如网易，希望页面上所有的超级链接都没有下划线：<br>1           a{<br>2               /<em>去掉下划线：</em>/<br>3               text-decoration: none;<br>4           }</p>
+<p>2.2 id选择器</p>
+<p>#表示选择id<br>1           #lj1{<br>2               font-size: 60px;<br>3               font-weight: bold;<br>4               color:black;<br>5           }<br>1）任何的标签都可以有id，id的命名要以字母开头，可以有数字、下划线。大小写严格区别，也就是说mm和MM是两个不同的id。<br>2）同一个页面内id不能重复，即使不一样的标签，也不能是相同的id。<br>也就是说，如果有一个p的id叫做haha，这个页面内，其他所有的元素的id都不能叫做haha。</p>
+<p>2.3 类选择器<br>.就是类的符号。类的英语叫做class。<br>所谓的类，就是class属性，class属性和id非常相似，任何的标签都可以携带class属性。<br>class属性可以重复，比如，页面上可能有很多标签都有teshu这个类：<br>1       </p><h3>我是一个h3啊</h3><br>2       <h3 class="teshu">我是一个h3啊</h3><br>3       <h3>我是一个h3啊</h3><br>4       <p>我是一个段落啊</p><br>5       <p class="teshu">我是一个段落啊</p><br>6       <p class="teshu">我是一个段落啊</p><br>css里面用.来表示类：<br>1           .teshu{<br>2               color: red;<br>3           }<p></p>
+<p>同一个标签，可能同时属于多个类，用空格隔开：<br>1   </p><h3 class="teshu  zhongyao">我是一个h3啊</h3><br>这样，这个h3就同时属于teshu类，也同时属于zhongyao类。<p></p>
+<p>初学者常见的错误，就是写成了两个class：<br>1   </p><h3 class="teshu">我是一个h3啊</h3><p></p>
+<p>所以要总结两条：<br>1） class可以重复，也就是说，同一个页面上可能有多个标签同时属于某一个类；<br>2） 同一个标签可以同时携带多个类。</p>
+<p>类的使用，能够决定一个人的css水平。<br>比如，我们现在要做一个页面：</p>
+<p>段落1<br>段落2<br>段落3</p>
+<p>正确的思路，就是用所谓“公共类”的思路，就是我们类就是提供“公共服务”，比如有绿、大、线，一旦携带这个类名，就有相应的样式变化：<br>1       <style type="text/css"><br>2           .lv{<br>3               color:green;<br>4           }<br>5           .da{<br>6               font-size: 60px;<br>7           }<br>8           .xian{<br>9               text-decoration: underline;<br>10          }<br>11      </style><br>每个标签，就去选取自己想要的类：<br>1       </p><p class="lv da">段落1</p><br>2       <p class="lv xian">段落2</p><br>3       <p class="da xian">段落3</p><p></p>
+<p>也就是说：<br>1） 不要去试图用一个类名，把某个标签的所有样式写完。这个标签要多携带几个类，共同造成这个标签的样式。<br>2） 每一个类要尽可能小，有“公共”的概念，能够让更多的标签使用。</p>
+<p>到底用id还是用class？<br>答案：尽可能的用class，除非极特殊的情况可以用id。<br>原因：id是js用的。也就是说，js要通过id属性得到标签，所以我们css层面尽量不用id，要不然js就很别扭。另一层面，我们会认为一个有id的元素，有动态效果。</p>
+<p>类上样式，id上行为</p>
+<p>就是一个标签，可以同时被多种选择器选择，标签选择器、id选择器、类选择器。这些选择器都可以选择上同一个标签，从而影响样式，这就是css的cascading“层叠式”的第一层含义。<br>三、css高级选择器<br>3.1 后代选择器<br>1       <style type="text/css"><br>2           .div1 p{<br>3               color:red;<br>4           }<br>5       </style></p>
+<p>空格就表示后代，.div1 p 就是.div1的后代所有的p。<br>强调一下，选择的是后代，不一定是儿子。<br>比如：<br>1       <div class="div1"><br>2           <ul><br>3               <li><br>4                   <p>段落</p><br>5                   <p>段落</p><br>6                   <p>段落</p><br>7               </li><br>8           </ul><br>9       </div><br>能够被下面的选择器选择上：<br>1           .div1 p{<br>2               color:red;<br>3           }<br>所以，看见这个选择器要知道是后代，而不是儿子。选择的是所有.div1“中的”p，就是后代p。</p>
+<p>空格可以多次出现。<br>1           .div1 .li2 p{<br>2               color:red;<br>3           }<br>就是.div1里面的后代.li2里面的p。</p>
+<p>后代选择器，就是一种平衡：共性、特性的平衡。当要把某一个部分的所有的什么，进行样式改变，就要想到后代选择器。</p>
+<p>后代选择器，描述的是祖先结构。</p>
+<p>3.2 交集选择器</p>
+<p>1   h3.special{<br>2       color:red;3 }<br>选择的元素是同时满足两个条件：必须是h3标签，然后必须是special标签。<br>交集选择器没有空格。<br>所以有没有空格<br>1   div.red<br>和<br>1   div .red<br>不是一个意思。</p>
+<p>交集选择器可以连续交（一般不要这么写）<br>1   h3.special.zhongyao{<br>2       color:red;3 }</p>
+<p>交集选择器，我们一般都是以标签名开头，比如div.haha  比如p.special。</p>
+<p>3.3 并集选择器（分组选择器）<br>1   h3,li{<br>2       color:red;3 }<br>用逗号就表示并集。</p>
+<p>3.4 通配符<em>
+</em>就表示所有元素。<br>1   *{<br>2       color:red;3 }<br>效率不高，如果页面上的标签越多，效率越低，所以页面上不能出现这个选择器。</p>
+<p>四、一些CSS3选择器<br>4.1 兼容问题介绍<br>我们现在给大家介绍一下浏览器：<br>IE： 微软的浏览器，随着操作系统安装的。所以每个windows都有IE浏览器。<br>windows xp  操作系统安装的IE6<br>windows vista 操作系统安装的IE7<br>windows 7   操作系统安装的IE8<br>windows 8   操作系统安装的IE9<br>windows10   操作系统安装的edge<br>浏览器兼容问题，要出，就基本上就是出在IE6、7身上，这两个浏览器是非常低级的浏览器。<br><a href="http://www1.pconline.com.cn/pcedu/specialtopic/css3-doraemon/" target="_blank" rel="external">http://www1.pconline.com.cn/pcedu/specialtopic/css3-doraemon/</a><br>Chrome浏览器：<br>    Firefox浏览器：<br>    IE8：<br>    IE6：</p>
+<p>浏览器的市场占有率： <a href="http://tongji.baidu.com/data/" target="_blank" rel="external">http://tongji.baidu.com/data/</a><br>今天：<br>IE9 5.94%<br>IE8 21.19%<br>IE7 4.79%<br>IE6 4.11%</p>
+<p>前端与移动学院开发学院对于低级浏览器的教学要求：<br>学生要知道典型的IE6兼容问题（面试要问），但是做项目我们兼容到IE8。老师不给你解决IE8以下的兼容问题。目的是，培养更高的兴趣和眼光，别天天的跟IE6较劲。</p>
+<p>HTML5浏览器打分：<br><a href="http://html5test.com/results/desktop.html" target="_blank" rel="external">http://html5test.com/results/desktop.html</a></p>
+<p>4.2 儿子选择器&gt;<br>IE7开始兼容，IE6不兼容。<br>1   div&gt;p{<br>2       color:red;3 }<br>div的儿子p。和div的后代p的截然不同。<br>能够选择：<br>1       <div><br>2           <p>我是div的儿子</p><br>3       </div><br>不能选择：<br>1       <div><br>2           <ul><br>3               <li><br>4                   <p>我是div的重孙子</p><br>5               </li><br>6           </ul><br>7       </div></p>
+<p>4.3 序选择器<br>IE8开始兼容；IE6、7都不兼容</p>
+<p>选择第1个li：<br>1       <style type="text/css"><br>2           ul li:first-child{<br>3               color:red;<br>4           }<br>5       </style></p>
+<p>选择最后一个1i：<br>1           ul li:last-child{<br>2               color:blue;<br>3           }<br>由于浏览器的更新需要过程，所以现在如果公司还要求兼容IE6、7，那么就要自己写类名：<br>1       <ul><br>2           <li class="first">项目</li><br>3           <li>项目</li><br>4           <li>项目</li><br>5           <li>项目</li><br>6           <li>项目</li><br>7           <li>项目</li><br>8           <li>项目</li><br>9           <li>项目</li><br>10          <li>项目</li><br>11          <li class="last">项目</li><br>12      </ul><br>用类选择器来选择第一个或者最后一个：<br>1           ul li.first{<br>2               color:red;<br>3           }<br>4<br>5           ul li.last{<br>6               color:blue;<br>7           }</p>
+<p>4.4 下一个兄弟选择器<br>IE7开始兼容，IE6不兼容。<br>+表示选择下一个兄弟<br>1       <style type="text/css"><br>2           h3+p{<br>3               color:red;<br>4           }<br>5       </style><br>选择上的是h3元素后面紧挨着的第一个兄弟。<br>1       </p><h3>我是一个标题</h3><br>2       <p>我是一个段落</p><br>3       <p>我是一个段落</p><br>4       <p>我是一个段落</p><br>5       <h3>我是一个标题</h3><br>6       <p>我是一个段落</p><br>7       <p>我是一个段落</p><br>8       <p>我是一个段落</p><br>9       <h3>我是一个标题</h3><br>10      <p>我是一个段落</p><br>11      <p>我是一个段落</p><br>12      <p>我是一个段落</p><br>13      <h3>我是一个标题</h3><p></p>
+<p>所有的css3选择器，我们放在HTML5和CSS3课上介绍。</p>
+<p>五、CSS的继承性和层叠性<br>5.1 继承性</p>
+<p>有一些属性，当给自己设置的时候，自己的后代都继承上了，这个就是继承性。<br>哪些属性能继承？<br>color、 text-开头的、line-开头的、font-开头的。</p>
+<p>这些关于文字样式的，都能够继承； 所有关于盒子的、定位的、布局的属性都不能继承。</p>
+<p>所以，如果我们的页面的文字，都是灰色，都是14px。那么就可以利用继承性：<br>1   body{<br>2       color:gray;<br>3       font-size:14px;4    }</p>
+<p>继承性是从自己开始，直到最小的元素。</p>
+<p>5.2 层叠性<br>很多公司如果要笔试，那么一定会考层叠性。</p>
+<p>层叠性：就是css处理冲突的能力。 所有的权重计算，没有任何兼容问题！<br>CSS像艺术家一样优雅，像工程师一样严谨。</p>
+<p>当选择器，选择上了某个元素的时候，那么要这么统计权重：<br>id的数量，类的数量，标签的数量</p>
+<p>不进位，实际上能进位（奇淫知识点：255个标签，等于1个类名）但是没有实战意义！</p>
+<p>如果权重一样，那么以后出现的为准：</p>
+<p>================================我是华丽丽的分界线=================================<br>如果不能直接选中某个元素，通过继承性影响的话，那么权重是0。</p>
+<p>如果大家都是0，那么有一个就近原则：谁描述的近，听谁的。</p>
+<p>权重问题大总结：<br>1） 先看有没有选中，如果选中了，那么以（id数，类数，标签数）来计权重。谁大听谁的。如果都一样，听后写的为准。<br>2） 如果没有选中，那么权重是0。如果大家都是0，就近原则。</p>
+<p>题目演示：</p>
+<p>第1题：</p>
+<p>第2题：</p>
+<p>第3题：</p>
+<p>第4题：</p>
+<p>css3：盒模型、浮动<br>css4：定位</p>
+<p>css5：背景、表格<br>css6：切图</p>
+<p>复习一下：</p>
+<p>下列都是IE6兼容的选择器：<br>p</p>
+<p>#box<br>.spec<br>div.box<br>div .box<br>div , .box<br>*<br>下列都是IE7开始兼容：<br>div&gt;p<br>div+p<br>下列都是IE8开始兼容：<br>div p:first-child<br>div p:last-child</p>
+<p>继承性：好的事儿。继承从上到下，哪些能？哪些不能？<br>层叠性：冲突，多个选择器描述了同一个属性，听谁的？</p>
+<p>注：此为传智播客笔记，仅供学习，不得转载</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/03/CSS第二天/" data-id="cj3h0s5hp0000ysxjlkkhoc2k" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS第一天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/03/CSS第一天/" class="article-date">
+  <time datetime="2017-06-03T08:05:17.624Z" itemprop="datePublished">2017-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/03/CSS第一天/">CSS第一天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、上节课知识复习<br>● HTML骨架结构，抽象的：<br>1   &lt;!DOCTYPE …… &gt;<br>2   <html><br>3       <head><br>4           网页的配置<br>5       </head><br>6       <body><br>7           给用户看的<br>8       </body><br>9   </html></p>
+<p>● DTD：文档类型声明Doc Type Declaration。一共有7种DTD，3种HTML4.01的，3种XHTML1.0的，1种HTML5的（HTML5我们后面专门的课程学习）。<br>三个小种： strict（更为严格，不能用u、b、i标签）、transitional（不怎么严格）、frameset<br>XHTML总体上要比HTML严格，比如必须是小写字母标签等等。</p>
+<p>● 字符集Charset， 这条meta不用背。<br>1   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><br>UTF-8   ： 字符全，每一个汉字3个字节，所以文件尺寸大。<br>gb2312(gbk) ： 字符少，每一个汉字2个字节，所以文件尺寸小。</p>
+<p>● 关键词、页面描述，这两个meta不难，尽量背诵一下：<br>1   <meta name="Keywords" content="词,词"><br>2   <meta name="Description" content="页面描述"></p>
+<p>● title标签就是页面标题</p>
+<p>● HTML就是负责描述语义的，所以就是用标签对儿的形式来给文本增加语义。<br>h1~h6  标题<br>p 段落<br>p标签要注意的是，里面只能放文本、图片、表单元素（这三个东西都是流元素，CSS后面细讲）。</p>
+<p>● img图片<br>完整语法，两个属性src和alt，都要知道是什么意思！<br>src：  source资源，    alt ： alternate 替代物<br>1   <img src="路径" alt="替代文本，当图片不能显示的时候，显示这里的文字"><br>图片里面的路径，相对路径，从html出发，找到图片。<br>1       <img src="images/jiehunzhao/0.png" alt=""><br>2       <img src="../../0.png" alt=""><br>● a标签，超级链接<br>a是英语anchor锚的意思。<br>a标签常用的就是三个属性：<br>1   <a href="网址" title="悬停文本" target="_blank">超级链接文字</a></p>
+<p>页面内的锚点，用name属性或者id属性<br>1       <a name="grjj"></a><br>2       <a id="grjj"></a><br>如果想跳转到某个锚点：<br>1   <a href="#grjj"></a></p>
+<p>● Chrome浏览器，中文翻译应该是“铬”，不是“硅”。审查元素功能快捷键是F12。<br>前端，很多东西都是自己审出来的，前端高手，都是开着审查元素上网的。</p>
+<p>二、列表<br>列表有3种<br>2.1 无序列表<br>无序列表，用来表示一个列表的语义，并且每个项目和每个项目之间，是不分先后的。<br>ul就是英语unordered list，“无序列表”的意思。<br>li 就是英语list item ， “列表项”的意思。<br>你会发现，这是我们学习的第一个“组标签”，就是要么不写，要么就要写一组。<br>1       <ul><br>2           <li>北京</li><br>3           <li>上海</li><br>4           <li>广州</li><br>5           <li>铁岭</li><br>6       </ul><br>也就是说，所以的li不能单独存在，必须包裹在ul里面；反过来说，ul的“儿子”不能是别的东西，只能有li。</p>
+<p>下面的是错误的，因为必须用ul包裹：<br>7           <li>北京</li><br>8           <li>上海</li><br>9           <li>广州</li><br>10          <li>铁岭</li></p>
+<p>下面的也是错误的，因为ul里面只能有li标签，而不能有别的：<br>1       <ul><br>2           <h3>中国主要城市</h3><br>3           <li>北京</li><br>4           <li>上海</li><br>5           <li>广州</li><br>6           <li>铁岭</li><br>7       </ul></p>
+<p>  浏览器会默认的给无序列表小圆点的“先导符号”<br>但是，我们这里再次强调，ul的作用，并不是给文字增加小圆点的，而是增加无序列表的“语义”的。</p>
+<p>ul标签实际应用场景：<br>导航条：</p>
+<p>li里面放置的内容可能很多：</p>
+<p>ul的儿子，只能是li。但是li是一个容器级标签，li里面什么都能放，比如：<br>1   <ul><br>2           <li><br>3               <h4>习近平谈治国理政</h4><br>4               <p>¥49.00</p><br>5               <p>《习近平谈治国理政》谈中国、论世界，为各国读者开启了一扇观察和感知中国的窗口。阅读这本书，可以了解以习近平同志为总书记的党中央治国理念和执政方略，品味悠长醇厚的中国历史文化，感受当</p><br>6           </li><br>7           <li><br>8               <h4>习近平用典</h4><br>9               <p>¥23.60</p><br>10              <p>人民日报社社长杨振武主持编写并作序，人民日报社副总编辑卢新宁组织撰写解读文字，旨在对习近平总书记重要讲话（文章）引用典故的现实意义进行解读，对典故的背景义</p><br>11          </li><br>12          <li><br>13              <h4>摆脱贫困</h4><br>14              <p>26.00</p><br>15              <p>追本溯源 融会贯通    深入学习贯彻习近平总书记系列重要讲话精神    推动学习贯彻向广度深度拓展   习近平总书记**部个人专著   时隔22年后重印发行</p><br>16          </li><br>17      </ul></p>
+<p>甚至于可以再放一个ul：<br>1   <ul><br>2           <li><br>3               吃的<br>18              <ul><br>19                  <li>饼干</li><br>20                  <li>面包</li><br>21                  <li><br>22                      巧克力<br>23                      <ul><br>24                          <li>德芙</li><br>25                          <li>费列罗</li><br>26                      </ul><br>27                  </li><br>28              </ul><br>4           </li><br>5           <li><br>6               用的<br>7               <ul><br>8                   <li>笔记本</li><br>9                   <li>圆珠笔</li><br>10              </ul><br>11          </li><br>12          <li><br>13              喝的<br>14              <ul><br>15                  <li>牛奶</li><br>16                  <li>可乐</li><br>17              </ul><br>18          </li><br>19      </ul></p>
+<p>2.2 有序列表<br>ordered list  有序列表，用ol表示<br>1       <ol><br>2           <li>小苹果</li><br>3           <li>月亮之上</li><br>4           <li>最炫民族风</li><br>5       </ol></p>
+<p>浏览器会自动增加阿拉伯序号：</p>
+<p>也就是说，ol和ul就是语义不一样，怎么使用都是一样的。<br>ol里面只能有li，li必须被ol包裹。li是容器级。</p>
+<p>ol这个东西用的不多，如果想表达顺序，大家一般也用ul：<br>1   <ul><br>2       <li>1. 小苹果</li><br>3       <li>2. 月亮之上</li><br>4       <li>3. 最炫民族风</li><br>5   </ul></p>
+<p>2.3 定义列表<br>定义列表也是一个组标签，不过比较复杂，出现了三个标签：<br>dl表示definition list 定义列表<br>dt表示definition title    定义标题<br>dd表示definition description 定义表述词儿<br>dt、dd只能在dl里面；dl里面只能有dt、dd<br>1       <dl><br>2           <dt>北京</dt><br>3           <dd>国家首都，政治文化中心</dd><br>4           <dt>上海</dt><br>5           <dd>魔都，有外滩、东方明珠塔、黄浦江</dd><br>6           <dt>广州</dt><br>7           <dd>中国南大门，有珠江、小蛮腰</dd><br>8       </dl><br>表达的语义是两层：<br>1) 是一个列表，列出了北京、上海、广州三个项目<br>2）每一个词儿都有自己的描述项。<br>dd是描述dt的。</p>
+<p>定义列表用法非常灵活，可以一个dt配很多dd：<br>1       <dl><br>2           <dt>北京</dt><br>3           <dd>国家首都，政治文化中心</dd><br>4           <dd>污染很严重，PM2.0天天报表</dd><br>5           <dt>上海</dt><br>6           <dd>魔都，有外滩、东方明珠塔、黄浦江</dd><br>7           <dt>广州</dt><br>8           <dd>中国南大门，有珠江、小蛮腰</dd><br>9       </dl><br>北京这个项目，用了两个dd来描述。<br>还可以拆开，让每一个dl里面只有一个dt和dd，这样子感觉清晰一些。<br>1       <dl><br>2           <dt>北京</dt><br>3           <dd>国家首都，政治文化中心</dd><br>4           <dd>污染很严重，PM2.0天天报表</dd><br>5       </dl><br>6<br>7       <dl><br>8           <dt>上海</dt><br>9           <dd>魔都，有外滩、东方明珠塔、黄浦江</dd><br>10      </dl><br>11<br>12      <dl><br>13          <dt>广州</dt><br>14          <dd>中国南大门，有珠江、小蛮腰</dd><br>15      </dl></p>
+<p>真实案例：<br>京东最下方：</p>
+<p>结构：<br>1   <dl><br>2       <dt>购物指南</dt><br>3       <dd><br>4           <a href="#">购物流程</a><br>5           <a href="#">会员介绍</a><br>6           <a href="#">生活旅行/团购</a><br>7           <a href="#">常见问题</a><br>8           <a href="#">大家电</a><br>9           <a href="#">联系客服</a><br>10      </dd><br>11  </dl><br>12  <dl><br>13      <dt>配送方式</dt><br>14      <dd><br>15          <a href="#">上门自提</a><br>16          <a href="#">211限时达</a><br>17          <a href="#">配送服务查询</a><br>18          <a href="#">配送费收取标准</a><br>19          <a href="#">海外配送</a><br>20      </dd><br>21  </dl></p>
+<p>传智播客师资介绍页面：</p>
+<p>dt、dd都是容器级标签，想放什么都可以。所以，现在就应该更加清晰的知道：<br>用什么标签，不是根据样子来决定，而是语义。</p>
+<p>三、div和span<br>div和span是非常重要的标签，div的语义是division“分割”； span的语义就是span“范围、跨度”。<br>CSS课程中你将知道，这两个东西，都是最最重要的“盒子”。</p>
+<p>1       <div><br>2           <h3>中国主要城市</h3><br>3           <ul><br>4               <li>北京</li><br>5               <li>上海</li><br>6               <li>广州</li><br>7           </ul><br>8       </div><br>9<br>10      <div><br>11          <h3>美国主要城市</h3><br>12          <ul><br>13              <li>纽约</li><br>14              <li>洛杉矶</li><br>15              <li>华盛顿</li><br>16              <li>西雅图</li><br>17          </ul><br>18      </div><br>div在浏览器中，默认是不会增加任何的效果改变的，但是语义变了，div中的所有元素是一个小区域。<br>div标签是一个容器级标签，里面什么都能放，甚至可以放div自己</p>
+<p>span也是表达“小区域、小跨度”的标签，但是是一个“文本级”的标签。<br>就是说，span里面只能放置文字、图片、表单元素。 span里面不能放p、h、ul、dl、ol、div。<br>span里面是放置小元素的，div里面放置大东西的：<br>1               </p><p><br>2                   简介简介简介简介简介简介简介简介<br>3                   <span><br>4                       <a href="">详细信息</a><br>5                       <a href="">购买</a><br>6                   </span><br>7               </p><br>div标签是最最重要的布局标签，至于class是什么意思，下午说：<br>1       <div class="header"><br>2           <div class="logo"></div><br>3           <div class="nav"></div><br>4       </div><br>5       <div class="content"><br>6           <div class="guanggao"></div><br>7           <div class="dongxi"></div><br>8       </div><br>9       <div class="footer"></div><br>所以，我们亲切的称呼这种模式叫做“div+css”。div标签负责布局，负责结构，负责分块。css负责样式。<p></p>
+<p>四、表单<br> 表单就是收集用户信息的，就是让用户填写的、选择的。<br>1       <div><br>2           <h3>欢迎注册本网站</h3><br>3           <form><br>4               所有的表单内容，都要写在form标签里面<br>5           </form><br>6       </div><br>form是英语表单的意思。form标签里面有action属性和method属性，在《Ajax》课程上给大家讲解。稍微说一下：action属性就是表示，表单将提交到哪里。 method属性表示用什么HTTP方法提交，有get、post两种。<br>4.1 文本框<br>1   <input type="text"></p>
+<p>input表示“输入”，指的是这是一个“输入小部件”，<br>type表示“类型”，<br>text表示“文本”，指的是类型是一个文本框的输入小部件。<br>这是一个自封闭标签，自此，我们学习的自封闭标签有：<br>1   <meta name="”Keywords”" content="””"><br>2   <img src="””" alt="””"><br>3   <input type="”text”"></p>
+<p>value表示“值”，value属性就是默认有的值，文本框中已经被填写好了：<br>1   <input type="text" value="默认有的值"></p>
+<p>4.2 密码框<br>1   <input type="password"><br>也就是说，input标签很神奇，又是文本框，又是密码框。<br>到底是啥？看type属性的值是什么，来决定。<br>如果type=”text”  文本框<br>如果type=”password” 密码框</p>
+<p>4.3 单选按钮</p>
+<p>只能选一个，术语叫做“互斥”。<br>1   <input type="radio" name="xingbie"> 男<br>2   <input type="radio" name="xingbie"> 女<br>radio是“收音机”的意思，input的type的值，如果是radio就是单选按钮。<br>非常像以前的收音机，按下去一个按钮，其他的就抬起来了。所以叫做radio。</p>
+<p>单选按钮，天生是不能互斥的，如果想互斥，必须要有相同的name属性。name就是“名字”。<br>1   <input type="radio" name="xingbie"> 男<br>2   <input type="radio" name="xingbie"> 女<br>默认被选择，就应该书写checked=”checked”<br>1   <input type="radio" name="sex" checked="checked"></p>
+<p>4.4 复选框</p>
+<p>也是input标签，type是checkbox。<br>1   </p><p><br>2       请选择你的爱好：<br>3       <input type="checkbox" name="aihao"> 睡觉<br>4       <input type="checkbox" name="aihao"> 吃饭<br>5       <input type="checkbox" name="aihao"> 足球<br>6       <input type="checkbox" name="aihao"> 篮球<br>7       <input type="checkbox" name="aihao"> 乒乓球<br>8       <input type="checkbox" name="aihao"> 打豆豆<br>9   </p><br>复选框，最好也是有相同的name（虽然他不需要互斥，但是也要有相同的name）<p></p>
+<p>HTML5中，input的类型又增加了很多（比如date、color，但是都不兼容，所以我们是在专门的HTML5课程中学）。<br>不过现在，我们就先学习这四个。<br>1   <input type="text"> 文本框<br>2   <input type="password"> 密码框<br>1   <input type="radio"> 单选按钮<br>2   <input type="checkbox"> 复选框</p>
+<p>4.5 下拉列表<br>select就是“选择”，option“选项”。<br>select标签和ul、ol、dl一样，都是组标签。<br>1   <select><br>2       <option>北京</option><br>3       <option>河北</option><br>4       <option>河南</option><br>5       <option>山东</option><br>6       <option>山西</option><br>7       <option>湖北</option><br>8       <option>安徽</option><br>9   </select></p>
+<p>4.6 多行文本框（文本域）<br>text就是“文本”，area就是“区域”。<br>1   <textarea cols="30" rows="10"></textarea><br>这个标签，是个标签对儿。对儿里面不用写东西。如果写的话，就是这个框的默认文字。</p>
+<p>cols属性表示columns“列”，rows属性表示rows“行”。<br>值就是一个数，表示多少行，多少列。</p>
+<p>4.7 三种按钮<br>按钮也是input标签，一共有三种按钮：<br>普通按钮：<br>1   <input type="button" value="我是一个普通按钮"><br>button就是英语“按钮”的意思。value就是“值”的意思，按钮上面显示的文字。</p>
+<p>提交按钮：<br>1   <input type="submit"><br>submit就是英语“提交”的意思。这个按钮不需要写value自动就有“提交”文字。<br>这个按钮点击，表单真的能提交。这个表单就会被提交到，form标签的action属性中的那个页面中去。<br>前端开发工程师，只需要关心页面的美、样式、板式、交互。至于数据的保存、读取，都是后台工程师做的事情。（Node.js我们猴年要学，Node.js就是后台语言，到时候我们就知道怎么把表单存储到数据库中了。实际上Ajax课会给大家讲半天的PHP，涉及MySQL，Ajax课你就知道表单怎么真的被提交了。）</p>
+<p>重置按钮：<br>1   <input type="reset"><br>reset就是“复位”的意思。</p>
+<p>至此，input的类型实际上非常多，HTML5将会变得更多。现在的阶段，input的类型：<br>1   text<br>2   password<br>3   radio<br>4   checkbox<br>5   button<br>6   submit<br>7   reset</p>
+<p>4.8 label标签<br>本质上讲，“男”、“女”这两个汉字，和input元素没有关系。<br>1   <input type="radio" name="sex"> 男<br>2   <input type="radio" name="sex"> 女</p>
+<p>label就是解决这个问题的。<br>1   <input type="radio" name="sex" id="nan"> <label for="nan">男</label><br>2   <input type="radio" name="sex" id="nv"> <label for="nv">女</label></p>
+<p>input元素要有一个id，然后label标签就有一个for属性，和id相同，就表示绑定了，这个label和input就有绑定关系了。</p>
+<p>复选框也有label：<br>1   <input type="checkbox" id="kk"><br>2   <label for="kk">10天内免登陆</label><br>什么表单元素都有label。<br>五、HTML杂项<br>5.1 HTML注释<br>任何的程序、代码都有注释，注释就是给程序员看的，不影响程序的。</p>
+<p>适当的注释，能够让我们的程序更加可读，所以用中文提示自己，这里的程序是干什么的。<br>1       <!--这里是头部，还没有做完，准备加两天班弄完--><br>2       <div>头部</div><br>3       <!--这里是陈伟弄的，跟我没关系--><br>4       <div>主要内容</div><br>5       <!--这里是高俊负责的--><br>6       <div>页尾</div><br>HTML注释的语法<br>1   <!--注释的内容--><br>Sublime中按ctrl+/ 就是注释</p>
+<p>5.2 字符实体<br>我们想在页面上输出“</p><h1>”这些字符，但是HTML认为这是一个标签，还没封闭。<br>1   好高兴啊，今天我们学习了<h1>标签，老师说这个标签是主标题的语义。<br>所以，<br>1   &lt;<br>就是&lt;的字符实体，什么意思呢？就是用常用字符表示这些符号的方式。<br>lt 就是英语less than 小于的意思；<p></p>
+<p>1   &gt;<br>就是&gt;的字符实体。<br>gt就是greater than 大于的意思。</p>
+<p>1   &copy;<br>就是©  版权符号。</p>
+<p>1   &nbsp;<br>nbsp就是英语non-breaking spacing不打断空格的意思，就是空格。</p>
+<p>所以：<br>1   哈&nbsp;&nbsp;&nbsp;&nbsp;哈<br>空出了4个字的格，可以防止空白折叠现象。</p>
+<p>5.3 HTML废弃标签介绍<br>HTML现在只负责语义，而不负责样式。但是HTML一开始，连样式也包办了。<br>这些样式的标签，都已经被废弃。</p>
+<p>2004年之前的东西了：<br>1   <font size="9" color="red">哈哈</font></p>
+<p>这些标签都是css钩子，而不是原意：<br>1       <b>加粗</b><br>2       <u>下划线</u><br>3       <i>倾斜</i><br>4       <del>删除线</del><br>5       <em>强调</em><br>6       <strong>强调</strong><br>这些标签，是有着浓厚的样式的作用，干涉了css的作用，所以HTML抛弃了他们。</p>
+<p>水平线：<br>1   <hr></p>
+<p>换行：<br>1   <br><br>不另起一个段落，进行换行。<br>1       </p><p><br>2           哈<br>哈哈<br>3       </p><br>网页中99.9999%需要换行的时候，是因为另起了一个段落，所以要用p，不要用<br><br>br是英语break打断的意思。<p></p>
+<p>标准的div+css页面，用的标签种类很少：<br>1   div  p  h1  span   a   img   ul   ol    dl    input<br>知道每个标签的特殊用法、属性。比如a标签，img的属性。<br>HTML结构、字符集。<br>网络的基础知识。</p>
+<p>六、CSS<br>现在的互联网前端三层：<br>HTML    超文本标记语言 从语义的角度描述页面结构。<br>CSS     层叠式样式表  从审美的角度负责页面样式。<br>JS      JavaScript      从交互的角度描述页面行为。</p>
+<p>我们现在要开始学习CSS了，就是样式。<br>6.1 CSS整体感知<br>css是cascading style sheet 层叠式样式表的简写。“层叠式”的意思，我们将慢慢的去理解。<br>css的最新版本是css3，我们学习的是css2.1。 因为css3和css2.1不矛盾，必须先学2.1然后学3。</p>
+<p>1       <style type="text/css"><br>2           p{<br>3               color:red;<br>4               font-size: 30px;<br>5               text-decoration: underline;<br>6               font-weight: bold;<br>7               text-align: center;<br>8               font-style: italic;<br>9           }<br>10          h1{<br>11              color:blue;<br>12              font-size: 50px;<br>13              font-weight: bold;<br>14              background-color: pink;<br>15          }<br>16      </style></p>
+<p>我们写css的地方是style标签，就是“样式”的意思，写在head里面。<br>后面的课程你将知道，css也可以写在单独的文件里面，现在我们先写在style标签里面<br>1   <style type="”text/css”"><br>2   </style><br>type表示“类型” ， text就是“纯文本”。css也是纯文本的。<br>sublime这里如果想自动生成，那么要输入：</p>
+<p>&lt;st 然后按tab键。</p>
+<p>css对换行不敏感，对空格也不敏感。但是一定要有标准的语法。冒号，分号都不能省略。<br>语法：<br>1   选择器{<br>2       k:v;<br>3       k:v;<br>4       k:v;<br>5       k:v;<br>6   }<br>7   选择器{<br>8       k:v;<br>9       k:v;<br>10      k:v;<br>11      k:v;12  }</p>
+<p>6.2 一些常见的属性<br>字符颜色：<br>1   color:red;<br>color属性的值，可以是英语单词，比如red、blue、yellow等等；也可以是rgb、十六进制，不要着急，后几天讲。<br>sublime中的快捷键是c，然后tab</p>
+<p>字号大小：<br>1   font-size:40px;<br>font就是“字体”，size就是“尺寸”。px是“像素”。<br>单位必须加，不加不行。<br>sublime中的快捷键是fos，然后tab</p>
+<p>背景颜色：<br>1   background-color: blue;<br>background就是“背景”。<br>sublime中的快捷键是bgc，然后tab</p>
+<p>加粗：<br>1   font-weight: bold;<br>font是“字体” weight是“重量”的意思，bold粗。<br>sublime中的快捷键是fwb，然后tab<br>不加粗：<br>1   font-weight: normal;<br>normal就是正常的意思<br>sublime中的快捷键是fwn，然后tab</p>
+<p>斜体：<br>1   font-style: italic;<br>italic就是“斜体”<br>sublime中的快捷键是fsi，然后tab<br>不斜体：<br>1   font-style: normal;<br>sublime中的快捷键是fsn，然后tab</p>
+<p>下划线：<br>1   text-decoration: underline;<br>decoration就是“装饰”的意思。<br>sublime中的快捷键是tdu，然后tab</p>
+<p>没有下划线：<br>1   text-decoration:none;<br>sublime中的快捷键是tdn，然后tab</p>
+<p>css没啥难的，就是要把属性给记忆准确。</p>
+<p>七、基础选择器<br>css怎么学？很简单有两个知识部分：<br>1） 选择器，怎么选；<br>2） 属性，样式是什么<br>7.1 标签选择器<br>就是标签的名字。</p>
+<p>1   </p><h1>前端与移动开发<span>1期班</span>基础班</h1><br>css:<br>1       <style type="text/css"><br>2           span{<br>3               color:red;<br>4           }<br>5       </style><p></p>
+<p>注意的是：<br>1） 所有的标签，都可以是选择器。比如ul、li、label、dt、dl、input<br>1           ul{<br>2               background-color: yellow;<br>3           }</p>
+<p>2） 无论这个标签藏的多深，一定能够被选择上：<br>1       <ul><br>2           <li><br>3               <ul><br>4                   <li><br>5                       <ul><br>6                           <li><br>7                               <ul><br>8                                   <li><br>9                                       <p>我是很深的p</p><br>10                                  </li><br>11                              </ul><br>12                          </li><br>13                      </ul><br>14                  </li><br>15              </ul><br>16          </li><br>17      </ul><br>css：<br>1           p{<br>2               color:blue;<br>3           }<br>能够让很深的p变蓝。</p>
+<p>3） 选择的所有，而不是一个。</p>
+<p>标签选择器，选择的是页面上所有这种类型的标签，所以经常描述“共性”，无法描述某一个元素的“个性”的。</p>
+<p>7.2 id选择器<br>1       </p><p>我是段落1</p><br>2       <p id="para2">我是段落2</p><br>3       <p>我是段落3</p><br>css：<br>1       <style type="text/css"><br>2           #para2{<br>3               color:red;<br>4           }<br>5       </style><br>id选择器的选择符是“#”。<br>任何的HTML标签都可以有id属性。表示这个标签的名字。<br>这个标签的名字，可以任取，但是：<br>1） 只能有字母、数字、下划线<br>2） 必须以字母开头<br>3） 不能和标签同名。比如id不能叫做body、img、a<p></p>
+<p>一个HTML页面，不能出现相同的id，哪怕他们不是一个类型。比如页面上有一个id为pp的p，一个id为pp的div，是非法的！</p>
+<p>一个标签可以被多个css选择器选择，共同作用，这就是“层叠式”的第一层含义。第二层含义，明天介绍。</p>
+<p>如果选择器冲突了，比如id选择器说这个文字是红色的，标签选择器说这个文字是绿色的。那么听谁的？<br>实际上，css有着非常严格的计算公式，能够处理冲突，明天介绍。</p>
+<p>注：此为传智播客笔记，仅供学习，不得转载</p>
+</h1></h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/03/CSS第一天/" data-id="cj3h0s5hx0001ysxj2s5wnc9n" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML第二天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/03/HTML第二天/" class="article-date">
+  <time datetime="2017-06-03T08:03:46.280Z" itemprop="datePublished">2017-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/03/HTML第二天/">HTML第二天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##一、复习上节课的内容<br>网页的原理：用户输入网址之后，对应的服务器就发现有人请求我的网页了，所以这个服务器就会把网页和相关的图片、js文件、css文件、flash文件都通过HTTP协议传输到用户的电脑里面。HTML页面在用户的电脑里面进行渲染。HTTP协议指的是超文本传输协议。每一个网址，都对应了服务器上面的确定的文件。<br>纯文本文件：只有内容，没有样式。常见的纯文本文件有：.txt、.html、.js、.css、.java。没有语义，即使你这个文件中的内容排版再清晰，那也是人认为的，实际上纯文本文件中的所有的文字生而平等，没有任何的语义。<br>HTML：超文本标记语言，HyperText Markup Language。就是通过标签对儿，给纯文本增加语义。也就是说，用文本给文本增加语义，所以这个叫做“超文本”。而有一对儿对儿标签，也成为“标记”，所以就是“超文本标记语言”。<br>标签： 主标题的语义 ，h是英语headline标题的意思。<br>1   </p><h1></h1><br>二级标题<br>1   <h2></h2><br>段落，p是英语paragraph段落的意思。<br>1   <p></p><br>HTML中除了语义，其他什么都没有：没有样式、没有交互、没有行为。<br>所以HTML不能让文本居中、字号调整、颜色改变、字体、下划线、倾斜……<p></p>
+<p>sublime: 做网页和什么软件没有任何关系，所以做网页不等于DreamWeaver。Sublime非常快、方便、小巧、插件多，所以我们使用sublime。sublime中有常用的快捷键。<br>新建文件    ctrl+n<br>保存      ctrl+s<br>调整字号    ctrl+滚轮<br>上移当前行   ctrl+shift+↑<br>复制当前行   ctrl+shift+d<br>删除当前行   ctrl+shift+k</p>
+<p>二、HTML骨架</p>
+<p>标准的骨架<br>1   &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" target="_blank" rel="external">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a><br>2   <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><br>3   <head><br>4       <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><br>5       <title>Document</title><br>6   </head><br>7   <body><br>8<br>9   </body><br>10  </html></p>
+<p>我们一部分一部分学习。<br>2.1 文档声明头<br>任何一个标准的HTML页面，第一行一定是一个以<br>1   &lt;!DOCTYPE ……<br>开头的语句。<br>这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。<br>到底有哪些规范呢？<br>首先我们先确定一件事儿，我们现在学习的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。后面将知道手机、移动端的网页，就可以使用HTML5了。</p>
+<p>HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：<br>HTML4.01里面规定了普通、XHTML两大种规范。<br>HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？<br>1   </p><h1></h1><br>所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。<p></p>
+<p>总结一下，一共有6种DTD，说白了，HTML第一行语句一共有6种：<br>大规范 里面的小规范<br>HTML4.01    Strict        严格的，体现在一些标签不能使用，比如u<br>Transitional   普通的<br>Frameset     带有框架的页面<br>XHTML1.0<br>严格体现在小写标签、闭合、引号 Strict          严格的，体现在一些标签不能使用，比如u<br>Transitional    普通的（我们学习的版本）<br>Frameset      带有框架的页面</p>
+<p>strict表示“严格的”，这种模式里面的要求更为严格。这种严格体现在哪里？有一些标签不能使用。<br>比如，u标签，就是可以让一个本文加上下划线，但是这和HTML的本质有冲突，因为HTML只能负责语义，不能负责样式，而u这个下划线是样式。所以，在strict中是不能使用u标签的。<br>1       <u>嘻嘻嘻嘻嘻</u><br>怎么给文本增加下划线呢？今后的css将使用css属性来解决。</p>
+<p>Transitional表示“普通的”，这种模式就是没有一些别的规范。<br>Frameset表示“框架”，在框架的页面使用。</p>
+<p>我们学习的就是XHTML1.0中的transitional版本。因为我们的页面中偶尔要使用一些类似u这种标签（当做CSS钩子）。<br>sublime输入的html:xt  x表示XHTML，t表示transitional<br>HTML5中极大的简化了DTD，也就是说HTML5中就没有XHTML了（W3C自己打脸了）：<br>1   &lt;!DOCTYPE html&gt;</p>
+<p>2.2 字符集<br>1   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><br>字符集用meta标签定义，meta表示“元”。“元”配置，就是表示基本的配置项目。<br>charset就是charactor set“字符集”的意思。这个meta不用背，谁背谁傻，用sublime生成就行。<br>中文能够使用的字符集两种：<br>第一种：UTF-8<br>1   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><br>第二种：gb2312<br>1   <meta http-equiv="Content-Type" content="text/html;charset=gb2312"><br>也可以写成gbk<br>2   <meta http-equiv="Content-Type" content="text/html;charset=gbk"></p>
+<p>什么是字符集？活字印刷术，所有的汉字都有一个个小印章，需要哪个字，就取哪个字。</p>
+<p>但是，有两个人都发明了字库。老王发明了一个，老李也发明了一个。<br>比如同一个汉字，“传”字在老王的字库里面是第2个大盘子第4行第43列的。<br>而这个汉字“传”在老李的字库里面是第5个大盘子第6行第13列的。<br>计算机，不能直接存储汉字，而是存储的是编码，所以，计算机记录“传”这个字，就是这么记录的：<br>老王：<br>1   20443<br>老李<br>1   50613</p>
+<p>有两个字库UTF-8和gb2312。<br>UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……<br>gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。</p>
+<p>字库规模：  UTF-8（字全） &gt; gb2312（只有汉字）</p>
+<p>我们用meta标签可以声明当前这个html文档的字库，但是一定要和保存的类型一样，否则乱码！（重点）</p>
+<p>当我们不设置的时候，sublime默认类型就是UTF-8。而一旦更改为gb2312的时候，就一定要记得设置一下sublime的保存类型： 文件→ set File Encoding to → Chinese Simplified(GBK)</p>
+<p>记住两者匹配：</p>
+<p>注意，由于UTF-8里面保存了世界上所有人类语言，所以描述一个汉字需要的码更多。<br>UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。</p>
+<p>保存大小：   UTF-8（更臃肿、加载更慢） &gt; gb2312 （更小巧，加载更快）</p>
+<p>总结：<br>UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；<br>gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。</p>
+<p>列出2个使用情形：<br>1） 你们公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。<br>2） 你们公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。</p>
+<p>我们亲测：<br>● qq网、网易、搜狐都是使用gb2312。这些公司，都追求显示速度。<br>● 新华网藏语频道，使用的是UTF-8，保证字符集的数量。</p>
+<p>我们的课程，一律使用UTF-8，因为我们懒，懒得改了。</p>
+<p>浏览器就是通过meta来看你是什么字符集的，比如你保存的时候meta写的，和声明的不匹配，那么浏览器就是乱码。</p>
+<p>2.3 关键字和页面描述<br>meta除了可以设置字符集，还可以设置关键字和页面描述。<br>设置页面描述：<br>1   <meta name="Description" content="网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。"><br>只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。</p>
+<p>抽象一下：<br>1   <meta name="””" content="””"><br>name就是“名字”的意思，content是“内容”的意思。<br>也就是说，我们定义了一个名字是“Description”（描述）的meta。内容是网易是中国领先……<br>定义关键词：<br>1   <meta name="Keywords" content="网易,邮箱,游戏,新闻,体育,娱乐,女性,亚运,论坛,短信"><br>这些关键词，就是告诉搜索引擎，这个网页是干嘛的，能够提高搜索命中率。让别人能够找到你，搜索到你。<br>Keywords就是“关键词”的意思。</p>
+<p>所以，一个比较完整的骨架是这样：<br>1   &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" target="_blank" rel="external">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a><br>2   <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><br>3   <head><br>4       <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><br>5       <meta name="Keywords" content="牛逼，很牛逼，特别牛逼"><br>6       <meta name="Description" content="网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。"><br>7       <title>Document</title><br>8   </head><br>9   <body><br>10<br>11  </body><br>12  </html><br>第4行 ：   字符集设置<br>第5行：    关键词<br>第6行：    描述</p>
+<p>2.4 title标签<br>1   <title>网页的标题</title></p>
+<p>title也是有助于SEO搜索引擎优化的：<br>1   <title>传智播客官网-传智播客提供java培训、web前端培训、php培训、C/C++培训、iOS培训、网页设计培训、平面设计培训、UI设计培训、游戏开发培训、网络营销培训服务</title></p>
+<p>网页的head标签里面，表示的是页面的配置，有什么配置？<br>字符集、关键词、页面描述、页面标题。<br>今后我们还能看见一些配置：IE适配、视口、iPhone小图标等等……</p>
+<p>三、HTML的基本语法特性<br>3.1 HTML对换行不敏感，对tab不敏感<br>HTML只在乎标签的嵌套结构，嵌套的关系。谁嵌套了谁，谁被谁嵌套了，和换行、tab无关。<br>换不换行、tab不tab，都不影响页面的结构。<br>所以：<br>1       <div><br>2   <h3></h3><br>3       <p></p><br>4       </div><br>完全等价于：<br>1       <div><br>2           <h3></h3><br>3           <p></p><br>4       </div><br>也就是说，HTML不是依靠缩进来表示嵌套的，就是看标签的包裹关系。但是，我们发现有良好的缩进，代码更易读。要求大家都正确缩进标签。</p>
+<p>百度为了追求极致的显示速度，所以HTML标签都没有换行、都没有缩进（tab），HTML和换不换行无关，标签的层次依然清晰，只不过程序员不可读了：</p>
+<p>3.2 空白折叠现象<br>HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。<br>代码：里面有空格、缩进、换行<br>1       </p><p>我爱<br>2<br>3<br>4                                     陈伟</p><br>显示的时候，折叠了：<p></p>
+<p>3.3 标签要严格封闭<br>标签不封闭是灾难的：<br>1   <title>欢迎<title></title></title></p>
+<p>多说一嘴，HTML、CSS就是写代码，不能算“编程”，因为这里面没有业务逻辑，加减乘除，与或非。<br>说白了，就是用代码画画。 </p>
+<p>四、h和p标签<br>4.1 h系列</p>
+<p></p><h1> 到 <h6> 都是标签：<p></p>
+<p></p><h1></h1> 一级标题<p></p>
+<p></p><h2></h2> 二级标题<br>……<p></p>
+<p></p><h6></h6> 六级标题<p></p>
+<p>h标签没有嵌套关系的。由于h3跟着一个h2，所以，我们自己就知道了这个h3是h2子标题。<br>1       </p><h1>今日学习内容</h1><br>2       <h2>一、复习上节课的内容</h2><br>3       <h2>二、HTML骨架</h2><br>4       <h3>2.1 文档声明头</h3><br>5       <h3>2.2 字符集</h3><br>6       <h3>2.3 关键字和页面描述</h3><br>7       <h3>2.4 title标签</h3><br>8       <h2>三、HTML的基本语法特性   </h2><br>9       <h3>3.1 HTML对换行不敏感，对tab不敏感</h3><br>10      <h3>3.2 空白折叠现象</h3><br>11      <h3>3.3 标签要严格封闭</h3><br>12      <h2>四、h和p标签</h2><br>13      <h3>4.1 h系列</h3><br>h是容器级的标签。理论上里面可以放置p、ul，只是法律上的允许，在语义上，不要这么写。<br>4.2 p标签<br>段落，是英语paragraph“段落”缩写。<br>HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。<br>顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。<p></p>
+<p>p标签是一个文本级标签。从学习p的第一天开始，就要死死记住：p里面只能放文字、图片、表单元素。其他的一律不能放。</p>
+<p>Chrome浏览器  是世界上HTML5支持最好的浏览器。提供了非常好的开发工具，非常适合我们开发人员使用。审查元素功能的快捷键是F12。<br>Chrome的英语原意“硅”，是谷歌公司的产品，所以也叫作谷歌浏览器。</p>
+<p>审查元素功能：</p>
+<p>试着把h放到p到里：<br>1       </p><p><br>2           我是一个小段落<br>3           </p><h1>我是一个主标题</h1><br>4       <p></p><br>浏览器不允许你这么做，我们使用Chrome的F12审查，你会发现，浏览器自己把p封闭掉了，不让你去包裹h1。<p></p>
+<p>所以，再次强调，p是一个文本级的标签，p里面只能放文字、图片、表单元素。</p>
+<p>正确的：<br>1       </p><h3>个人经历</h3><br>2       <p><br>3           Angelababy从小怎么怎么样<br>4       </p><br>错误的：<br>1       <p><br>2           </p><h3>个人经历</h3><br>3           Angelababy从小怎么怎么样<br>4       <p></p><p></p>
+<p>五、图片<br>5.1 能用的图片类型<br>页面上可以插入图片，能够插入的图片类型是：jpg(jpeg)、gif、png、bmp。类型和类型之间有什么区别，css课上讲。<br>不能往网页中插入的图片格式是：psd、ai</p>
+<p>5.2 语法<br>HTML页面不是直接插入图片，而是插入图片的引用地址，所以也要把图片上传到服务器上。<br>插入方法：<br>1   <img src="baby.jpg"><br>img是英语image“图片”的简写<br>src 是英语source“资源”的简写，千万不要写成scr。<br>src是img标签的属性，baby.jpg是这个属性的值。</p>
+<p>这个标签和我们之前学的，都不一样，因为这个标签不是“对儿”。自封闭标签，也称为单标签。<br>为什么？原因很简单，如果是对儿，里面就要有内容，表示给这个内容增加语义。比如<br>1   </p><h1>哈哈哈哈，我是主标题啦！！！</h1><br>图片就是一个图片，不需要给什么文字增加语义，所以就是自己一个人活得挺好：<br>1   <img><p></p>
+<p>我们上午学习的meta也是自封闭标签：<br>1   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></p>
+<p>5.3 alt属性<br>alt属性：<br>1   <img src="baby.jpg" alt="巴黎结婚照"><br>alt是英语alternate“替代”的意思，就表示不管因为什么原因，当这个图片无法被显示的时候，出现的替代文字（有的浏览器不支持）。</p>
+<p>5.4 相对路径<br>HTML中插入图片，所以现在有两个文件，一个html文件，一个是jpg文件。<br>我们关心的就是这两个文件的相对位置。即使这个网站项目，被用u盘拷给了别人，只要相对路径不变。图片一定能够正常显示。</p>
+<p>当图片在文件夹里面的时候：</p>
+<p>1   <img src="images/baby.jpg" alt="巴黎结婚照"></p>
+<p>如果在很深的文件夹中，也不怕，可以一直罗列下去：<br>1   <img src="images/jiehunzhao/baby.jpg" alt="巴黎结婚照"></p>
+<p>如果情况变得复杂，我们的图片在浅一层的文件夹中：</p>
+<p>1   <img src="../3.jpg" alt=""></p>
+<p>如果是上两级：<br>1   <img src="../../shizi.jpg" alt=""></p>
+<p>还可以更为复杂：<br>1   <img src="../../images/jiehunzhao/baby.jpg" alt=""><br>上两级的文件夹中的images文件夹中的jiehunzhao的文件夹中的baby.jpg</p>
+<p>相对路径不会出现这种情况：<br>1   aaa/../bbb/1.jpg<br>../要么不写，要么就写在开头。</p>
+<p>标准答案：<br>1   <img src="../../photo/1.png"><br>解释：<br>现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。  所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。</p>
+<p>六、超级链接<br>6.1 基本写法<br>一个网站，是由很多html网页组成的，html网页之间能够通过超级链接互相跳转，从而形成了“网”。<br>语法：<br>1   <a href="1.html">结婚照</a></p>
+<p>效果图：  </p>
+<p>a是英语anchor“锚”的意思，就好像这个页面往另一个页面扔出了一个锚。是一个文本级的标签。</p>
+<p>href是英语hypertext reference超文本地址的缩写。读作“喝瑞夫”，不要读作“喝夫”。</p>
+<p>6.2 a标签的另外两个属性<br>title 悬停文本</p>
+<p>1   <a href="09_img.html" title="很好看哦">结婚照</a></p>
+<p>target 是否在新窗口中打开<br>target实际上是“目标”的意思。<br>1   <a href="09_img.html" title="很好看哦" target="_blank">结婚照</a><br>blank就是“空白”的意思，就表示新建一个空白窗口。为毛有一个_ ，就是规定，没啥好解释的。<br>也就是说，如果不写target=”_blank”那么就是在相同的标签页打开，如果写了，就是在新的空白标签页中打开。<br>完整的超级链接：<br>1   <a href="1.html" title="悬停文本" target="_blank">链接的内容</a></p>
+<p>分清楚img和a标签的各自的属性：<br>1   <img src="1.jpg"><br>2   <a href="1.html"></a><br>6.3 页面内的锚点<br>页面当中可以有锚点，所谓的锚点，就是一个小标记，这个小标记是用户不可察觉的，用户不知道这里有一个标记。<br>锚点用name属性来设置，一个a标签如果name属性（或者id属性），那么就是页面的一个锚点。<br>1   <a name="wdzp">我的作品</a><br>2   或者：<br>3   <a id="wdzp">我的作品</a><br>那么网址：<br>1   1.html#wdzp<br>就能够让这个锚点在页面最顶端显示，此时页面有卷动。<br>这样子，用户体验会好一点，用户可以直接看到页面的内容。</p>
+<p>如果有一个超级链接，指向页面中的锚点，那么就是：<br>1   <a href="#wdzp">点击我就查看我的作品</a></p>
+<p>6.4 a是一个文本级的标签<br>比如一个段落中的所有文字都能够被点击，那么应该：<br>p包裹a：<br>1   </p><p><br>2       <a href="">段落段落段落段落段落段落</a><br>3   </p><br>而不是a包裹p：<br>1   <a href=""><br>2       <p><br>3           段落段落段落段落段落段落<br>4       </p><br>5   </a><br>a的语义要小于p，a就是可以当做文本来处理，所以p里面相当于放的就是纯文字。<p></p>
+<p>能够制作能被点击的图片</p>
+<p>此为传智播客笔记，仅供学习，不得转载  </p>
+</h6></h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/03/HTML第二天/" data-id="cj3h0s5i00002ysxjp5i1gois" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-HTML第一天" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -71,9 +424,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/03/HTML第一天/">HTML第一天</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: HTML第一天<br>一、基础班的介绍<br> 1.1 脚踏实地行，海阔天空飞<br>课时安排：<br>        HTML        2天<br>        CSS            6天<br>        JavaScript    3天<br>这里强调一下，不用担心CSS课程少，因为我们的就业班的一上来，就是《前端基本功》老师会带着大家解决工程上的HTML、CSS问题。之后就是全JS语境。<br>目的：</p>
+        <p>#基础班的介绍<br> 1.1 脚踏实地行，海阔天空飞<br>课时安排：<br>        HTML        2天<br>        CSS            6天<br>        JavaScript    3天<br>这里强调一下，不用担心CSS课程少，因为我们的就业班的一上来，就是《前端基本功》老师会带着大家解决工程上的HTML、CSS问题。之后就是全JS语境。<br>目的：</p>
 <pre><code>1. 让所有同学的HTML、CSS、JS基础，达到就业班水平
 2. 让同学慢慢进入学习状态，逐渐养成良好的习惯，适应学习强度
 </code></pre><p>特点：    </p>
@@ -86,7 +449,7 @@
 <li>零基础的同学，一定不要有任何的负面心理暗示，全力以赴，冲冲冲！</li>
 <li>要养成学习的习惯，为以后高强度的学习做好准备。</li>
 </ol>
-<p>二、计算机基础知识<br>2.1 文件和文件夹管理<br>● 熟练掌握文件和文件夹的管理，包括创建、删除、重命名、复制、粘贴、剪切、移动。<br>不多说，大家都会了，(<em>^__^</em>)<br>● 熟练掌握“文件拓展名”的意义<br>在windows下，所有的文件的名字，是两部分组成的。语法：<br>文件名.拓展名<br>拓展名一般就是2~4个字母，表示文件的格式。比如.jpg是图片格式，.mp3音乐格式，.doc文档。<br>一般来说，操作系统，是不能显示拓展名的，需要我们自己设置。我们以win7举例：</p>
+<p>#计算机基础知识<br>2.1 文件和文件夹管理<br>● 熟练掌握文件和文件夹的管理，包括创建、删除、重命名、复制、粘贴、剪切、移动。<br>不多说，大家都会了，(<em>^__^</em>)<br>● 熟练掌握“文件拓展名”的意义<br>在windows下，所有的文件的名字，是两部分组成的。语法：<br>文件名.拓展名<br>拓展名一般就是2~4个字母，表示文件的格式。比如.jpg是图片格式，.mp3音乐格式，.doc文档。<br>一般来说，操作系统，是不能显示拓展名的，需要我们自己设置。我们以win7举例：</p>
 <p>win8不是在这里设置，自己琢磨下。</p>
 <p>● 知道“打开方式”的意义<br>一个文件，可以用多种软件打开，这就叫做打开方式。</p>
 <p>实际上现在你就应该树立一种思维，同一个文件可以用不同的软件打开。比如，.jpg用“照片查看器”打开，就是浏览模式；用画图打开，就是编辑模式。</p>
@@ -95,7 +458,7 @@
 <p>2.2 特殊按键和快捷键<br>键盘上除了有字母、数字之外，还有一些特殊的按键：ctrl、shift、alt、tab<br>● ctrl键是英语control“控制”的意思，这个按键，单独按没有任何作用，都要和其他的按键一起按才有用。比如ctrl+c，表示同时按住ctrl键和c键，一会儿将知道这个功能是复制。<br>● shift键是英语shift“换挡”的意思，按下这个按键同时击打字母，打出的就是大写字母。熟悉shift键来打大写字母，尽量少用大小写锁定键。<br>● alt键是英语alternate“调整”的意思，和ctrl一样，自己按没啥用，都要和其他的按键一起按才有用。比如alt+f4，表示关闭当前的窗口，比如你正在玩儿游戏，老板来了，可以按alt+f4快速关闭窗口。<br>● tab键是用于table“             制表符”的意思，经常实现“切换的功能”。比如我们在word软件中同时打开了两个文档，可以用ctrl+tab键，来在两个文档之间切换。 当然，可以用alt+tab键来切换程序。</p>
 <p>必须熟练掌握下面的快捷键：<br>ctrl+c         复制<br>ctrl+v         粘贴<br>ctrl+x         剪切（就是移动文件，在原来的文件夹ctrl+x一个文件，然后在新文件夹中ctrl+v粘贴）<br>ctrl+tab         切换（具体切换什么，要看是什么软件）<br>alt+F4         关闭程序<br>F2             重命名<br>F5             刷新，比如看网页的时候，想刷新网页，按f5<br>ctrl+z         撤销，就是这一步干错了，就ctrl+z撤销<br>windows+E     打开资源管理器<br>windows+D    显示桌面<br>ctrl+空格        切换中英文，严禁用shift键切换，所有同学现在调整搜狗拼音输入法：</p>
 <p>2.3 打字速度<br>打字速度是必备的素养！<br>1） 严禁二指神功，必须养成正确的指法；比如打{时，要按住shift+[。<br>正确的按键方法，是左手小拇指按住左边的shift键，右手中指按[键。<br>2） 金山打字通。我们最近4天课，基本跟玩儿似的，贼简单，没啥事儿回家就用金山打字通练习打字。<br>不要练习中文打字，只练习英文打字就行了。英文文章一定要练习到每分钟100字以上。</p>
-<p>三、互联网的原理<br>3.1 上网就是请求数据<br>网页上的内容，怎么就被我们看见了？什么是上网？<br>我们先不直接解决这个问题，我们做一个小实验。我们每个人的电脑里面，都有一个神秘的文件夹：<br>C:\Users\Danny\AppData\Local\Microsoft\Windows\Temporary Internet Files<br>这个文件夹叫做临时文件夹（文件夹知道存在就可以了，不用自己试着去找）<br>蓝色部分是每个人不一样的<br>我们清空这个文件夹中的全部内容</p>
+<p>#互联网的原理<br>3.1 上网就是请求数据<br>网页上的内容，怎么就被我们看见了？什么是上网？<br>我们先不直接解决这个问题，我们做一个小实验。我们每个人的电脑里面，都有一个神秘的文件夹：<br>C:\Users\Danny\AppData\Local\Microsoft\Windows\Temporary Internet Files<br>这个文件夹叫做临时文件夹（文件夹知道存在就可以了，不用自己试着去找）<br>蓝色部分是每个人不一样的<br>我们清空这个文件夹中的全部内容</p>
 <p>我们打开IE浏览器，看几个网页。结果，这个文件夹中又多了很多的内容：</p>
 <p>通过这个实验，目前为止，我们可以得出结论，上网的时候，是有真实的、物理的文件传输的！<br>所以我们经常感觉第二次打开网页，比第一次快，这是因为第一次打开网页的时候，所有的图片都已经存过来了。<br>所以现在也能够解释，为什么每次都用360能清理一堆垃圾，释放很多硬盘空间。</p>
 <p>我们发现，浏览了一个163首页，就出来那么多的文件，所以现在我们的幼小的心灵中，就要有一个初步的认识，网页不是一个文件，而是一堆文件。</p>
@@ -124,18 +487,19 @@
 <p>html提供了很多标签对儿，可以给文本增加不同的语义。比如：</p>
 <p></p><h1>  </h1>标签对儿，主标题。<p></p>
 <p></p><h2>  </h2>标签对儿，二级标题。<p></p>
-<p>   </p> 标签对儿，普通段落。<br><br>现在的业界的标准，网页技术严格的三层分离：html就是负责描述页面的语义；css负责描述页面的样式；js负责描述页面的动态效果的。<br>所以，html不能让文字居中，不能更改文字字号、字体、颜色。因为这些都是属于样式范畴，都是css干的事儿；html不能让盒子运动起来，因为这些属性行为范畴，都是js干的事儿。<br>html只能干一件事儿，就是通过标签对儿，给文本增加语义。这是html唯一能做的。<br><br>html中，除了语义，其他什么都没有。<br><br>html是一个纯本文文件（就是用txt文件改名而成），用一些标签来描述文字的语义，这些标签在浏览器里面是看不到的，所以称为“超文本”，所以就是“超文本标记语言”了。<br>所以，接下来，我们肯定要学习一堆html中的标签对儿，这些标签对儿能够给文本不同的语义。<br><br>标签对儿是由起始标签和结束标签组成的：<br>1    <h1>Angelababy简介</h1><br><h1>  起始标签<br></h1> 结束标签<br><br>比如，面试的时候问你，h1标签有什么作用？<br>正确答案：给文本增加主标题的语义<br>错误答案：给文字加粗、加黑、变大<br><br><br><br><br>五、Sublime<br>任何的纯文本编辑器都能够编辑html，比如记事本、editplus、notepad++。<br>比较有名的专门制作网页的工具有：<br>DreamWeaver (Adobe公司的产品，前端学院不讲，这个东西过时了，不是一个好的代码编辑器)<br>Sublime （高效率的程序书写工具）<br>WebStorm （更高级的项目级别编程工具）<br><br>不管用什么编辑器，你都要知道，做网页和工具无关，任何的纯文本编辑器都能够做网页。我们学习的是代码，而不是所谓的工具。不过，不可否认，一个好的工具，确实能够提高工作效率，代码书写的速度，但是本质上讲，记事本也能书写网页。<br><br>sublime的中文意思是“华丽的”，是2011年开始流行的代码编辑器，可以编辑java、c、php等很多语言。<br>html、css、js在sublime中支持非常好。界面也非常漂亮，安装简单、小巧、插件多。<br><br>sublime非常小巧，只有21mb，甚至不用安装，直接解压缩，就能双击使用，把sublime_text.exe文件发送到桌面快捷方式就行了。<br><br>今后我们的文件，如何用sublime编辑呢？很简单，直接拖进来。<br>一定要记住，保存的时候，一定要书写.html，表示存为网页的格式。<br><br><br>sublime中的常用快捷键：<br>ctrl+滚轮        放大缩小文字<br>ctrl+shift+d    复制当前行<br>ctrl+shift+k    删除当前行<br>ctrl+shift+↑    上移当前行<br>ctrl+shift+↓    下移当前行<br>先介绍这些。<br>以后击打标签的时候，仅仅需要输入标签的名字，然后按tab就可以自动生成标签对儿了。<br>比如，输入p然后按tab，软件自动生成：<br>1    <p></p>
+<p>   </p> 标签对儿，普通段落。<br><br>现在的业界的标准，网页技术严格的三层分离：html就是负责描述页面的语义；css负责描述页面的样式；js负责描述页面的动态效果的。<br>所以，html不能让文字居中，不能更改文字字号、字体、颜色。因为这些都是属于样式范畴，都是css干的事儿；html不能让盒子运动起来，因为这些属性行为范畴，都是js干的事儿。<br>html只能干一件事儿，就是通过标签对儿，给文本增加语义。这是html唯一能做的。<br><br>html中，除了语义，其他什么都没有。<br><br>html是一个纯本文文件（就是用txt文件改名而成），用一些标签来描述文字的语义，这些标签在浏览器里面是看不到的，所以称为“超文本”，所以就是“超文本标记语言”了。<br>所以，接下来，我们肯定要学习一堆html中的标签对儿，这些标签对儿能够给文本不同的语义。<br><br>标签对儿是由起始标签和结束标签组成的：<br>1    <h1>Angelababy简介</h1><br><h1>  起始标签<br></h1> 结束标签<br><br>比如，面试的时候问你，h1标签有什么作用？<br>正确答案：给文本增加主标题的语义<br>错误答案：给文字加粗、加黑、变大<br><br><br><br><br>#Sublime<br>任何的纯文本编辑器都能够编辑html，比如记事本、editplus、notepad++。<br>比较有名的专门制作网页的工具有：<br>DreamWeaver (Adobe公司的产品，前端学院不讲，这个东西过时了，不是一个好的代码编辑器)<br>Sublime （高效率的程序书写工具）<br>WebStorm （更高级的项目级别编程工具）<br><br>不管用什么编辑器，你都要知道，做网页和工具无关，任何的纯文本编辑器都能够做网页。我们学习的是代码，而不是所谓的工具。不过，不可否认，一个好的工具，确实能够提高工作效率，代码书写的速度，但是本质上讲，记事本也能书写网页。<br><br>sublime的中文意思是“华丽的”，是2011年开始流行的代码编辑器，可以编辑java、c、php等很多语言。<br>html、css、js在sublime中支持非常好。界面也非常漂亮，安装简单、小巧、插件多。<br><br>sublime非常小巧，只有21mb，甚至不用安装，直接解压缩，就能双击使用，把sublime_text.exe文件发送到桌面快捷方式就行了。<br><br>今后我们的文件，如何用sublime编辑呢？很简单，直接拖进来。<br>一定要记住，保存的时候，一定要书写.html，表示存为网页的格式。<br><br><br>sublime中的常用快捷键：<br>ctrl+滚轮        放大缩小文字<br>ctrl+shift+d    复制当前行<br>ctrl+shift+k    删除当前行<br>ctrl+shift+↑    上移当前行<br>ctrl+shift+↓    下移当前行<br>先介绍这些。<br>以后击打标签的时候，仅仅需要输入标签的名字，然后按tab就可以自动生成标签对儿了。<br>比如，输入p然后按tab，软件自动生成：<br>1    <p></p>
 
 
-<p>六、HTML骨架和基本语法</p>
+<p>#HTML骨架和基本语法</p>
 <p>html有基本骨架，这个骨架能够用sublime快速生成：</p>
 <p>骨架抽象出来：<br>1    <html><br>2        <head><br>3<br>4        </head><br>5        <body><br>6<br>7        </body><br>8    </html><br>网页的最外层的标签对儿是<html></html>标签对儿，里面有两部分，分别是head和body。<br>head标签中，描述网页的配置；body中的内容，才是用户可以看见的内容。</p>
 <p>完整的骨架：<br>1    &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" target="_blank" rel="external">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a><br>2    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><br>3        <head><br>4            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><br>5            <title>哈哈哈</title><br>6        </head><br>7        <body><br>8             <h1>我是一个主标题</h1><br>9             <p>我是一个小段落</p><br>10        </body><br>11    </html><br>第1行，就是网页的声明头，这行语句，千万不要背诵，谁背谁傻。术语叫做DocType Defintion，文档类型定义，简称DTD。这行语句非常的复杂，里面暗含了一个网址。W3C就是出web规范的组织机构。html、css、js的规范都是W3C定义发布的。world wide web coalition , 国际万维网联盟。网页声明头可以告诉浏览器，这是一个什么标准的页面。<br>第2行，是最大的html标签，所有的网页内容，都要包裹在这个标签对儿里面。<br>我们发现，html标签中，有两个属性：<br>xmlns=”<a href="http://www.w3.org/1999/xhtml" target="_blank" rel="external">http://www.w3.org/1999/xhtml</a>“   命名空间，就是一个规范；<br>xml:lang=”en”   语言是英语<br>第3行，就是head标签，就是配置。<br>第4行，<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 字符集的配置<br>第5行，<title>哈哈哈</title>  网页的标题，可以显示在浏览器的标签栏中。<br>第7行，body标签就是网页的内容，用户能够看见。</p>
+<p>此为传智播客笔记，仅供学习，不得转载</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/03/HTML第一天/" data-id="cj3gzllmv00000gxju1wnklgp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/03/HTML第一天/" data-id="cj3h0s5i40003ysxjmzv4b24e" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -180,7 +544,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/23/hello-world/" data-id="cj3gzllnj00010gxjfebvxl8v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/23/hello-world/" data-id="cj3h0s5i60004ysxjt69l7v13" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -205,7 +569,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li></ul>
     </div>
@@ -215,12 +579,24 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/06/03/HTML第一天/">(no title)</a>
+            <a href="/2017/06/03/CSS第二天/">CSS第二天</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/03/CSS第一天/">CSS第一天</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/03/HTML第二天/">HTML第二天</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/03/HTML第一天/">HTML第一天</a>
           </li>
         
           <li>
